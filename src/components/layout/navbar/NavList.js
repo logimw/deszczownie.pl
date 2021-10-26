@@ -1,5 +1,6 @@
 import React from "react";
 import { StyledNavLink, StyledNavList } from "./NavList.styles";
+import SubMenuTrigger from "./SubMenuTrigger";
 
 const NavList = ({ isOpen }) => {
   return (
@@ -15,30 +16,11 @@ const NavList = ({ isOpen }) => {
         </StyledNavLink>
       </li>
       <li>
-        <details>
-          <summary>
-            <StyledNavLink activeClassName="nav--active" to="/oferta">
-              Oferta
-            </StyledNavLink>
-          </summary>
-          <ul className="submenu">
-            <li>
-              <StyledNavLink activeClassName="nav--active" to="/oferta-1">
-                Akcesoria 1
-              </StyledNavLink>
-            </li>
-            <li>
-              <StyledNavLink activeClassName="nav--active" to="/oferta">
-                Akcesoria 2
-              </StyledNavLink>
-            </li>
-            <li>
-              <StyledNavLink activeClassName="nav--active" to="/oferta-3">
-                Akcesoria 3
-              </StyledNavLink>
-            </li>
-          </ul>
-        </details>
+        <SubMenuTrigger>
+          <StyledNavLink activeClassName="nav--active" to="/oferta">
+            Oferta
+          </StyledNavLink>
+        </SubMenuTrigger>
       </li>
       <li>
         <StyledNavLink activeClassName="nav--active" to="/deszczownie">

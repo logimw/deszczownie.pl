@@ -9,6 +9,13 @@ const showList = keyframes`
   100% {
     transform: translateY(100%) scaleY(1);
   }`;
+const showListMobile = keyframes`
+  0% {
+    transform: translateY(0%) scaleY(0);
+  }
+  100% {
+    transform: translateY(0%) scaleY(1);
+  }`;
 const showListItem = keyframes`
   0% {
     opacity: 0;
@@ -22,6 +29,9 @@ export const StyledNavList = styled.ul`
   display: flex;
 
   details {
+    @media only screen and ${breakpoints.device.sm} {
+      width: 100%;
+    }
     &[open] {
       summary::after {
         transform: rotate(0);
@@ -47,20 +57,26 @@ export const StyledNavList = styled.ul`
         content: "";
         position: absolute;
         top: 50%;
-        width: 7px;
-        height: 2px;
+        width: 10px;
+        height: 3px;
         background: ${({ theme }) => theme.colors.primary};
         transition: transform 300ms ease-in-out;
       }
 
       &::after {
-        right: 3px;
         transform: rotate(-45deg);
+        right: 2px;
+        @media only screen and ${breakpoints.device.sm} {
+          right: 52px;
+        }
       }
 
       &::before {
-        right: 7px;
         transform: rotate(45deg);
+        right: 7px;
+        @media only screen and ${breakpoints.device.sm} {
+          right: 58px;
+        }
       }
 
       &:focus {
@@ -85,11 +101,20 @@ export const StyledNavList = styled.ul`
 
     @media only screen and ${breakpoints.device.sm} {
       position: relative;
+      animation: 300ms ease-in-out 1 forwards ${showListMobile};
+      max-width: unset;
+      background: none;
+      border-left: 0;
+      box-shadow: 1px 0 4px #e3e3e3;
     }
 
     li {
       background-color: transparent;
       transition: background-color 300ms ease-in-out;
+
+      @media only screen and ${breakpoints.device.sm} {
+        border-top: 1px solid ${({ theme }) => theme.colors.grey};
+      }
       a {
         opacity: 0;
         animation: 300ms 100ms ease-in-out 1 forwards ${showListItem};
@@ -99,6 +124,12 @@ export const StyledNavList = styled.ul`
         padding-left: 0;
         margin-left: 1rem;
         margin-right: 1rem;
+        @media only screen and ${breakpoints.device.sm} {
+          min-height: 5rem;
+          display: flex;
+          align-items: center;
+          color: ${({ theme }) => theme.colors.secondary};
+        }
 
         &.nav--active {
           border-bottom: 2px solid transparent;
@@ -110,6 +141,9 @@ export const StyledNavList = styled.ul`
       }
       &:not(a.nav--active) {
         border-bottom: 1px solid ${({ theme }) => theme.colors.lightGrey};
+        @media only screen and ${breakpoints.device.sm} {
+          //border-bottom: 1px solid ${({ theme }) => theme.colors.grey};
+        }
       }
 
       &:hover {
@@ -140,7 +174,7 @@ export const StyledNavList = styled.ul`
       width: 100%;
       padding-left: 5rem;
       min-height: 5rem;
-      border-bottom: 1px dotted ${({ theme }) => theme.colors.black};
+      border-bottom: 1px solid ${({ theme }) => theme.colors.grey};
       display: flex;
       align-items: center;
     }
@@ -163,8 +197,10 @@ export const StyledNavLink = styled(Link)`
   @media only screen and ${breakpoints.device.sm} {
     padding-left: 0;
     width: 100%;
-    display: inline-block;
     font-size: ${({ theme }) => theme.fontSize.l};
+    min-height: 5rem;
+    display: flex;
+    align-items: center;
   }
 
   &.nav--active {
@@ -177,5 +213,8 @@ export const StyledNavLink = styled(Link)`
 
   &:hover {
     border-bottom: 2px solid ${({ theme }) => theme.colors.secondary};
+    @media only screen and ${breakpoints.device.sm} {
+      border-bottom: 2px solid transparent;
+    }
   }
 `;
