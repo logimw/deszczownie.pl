@@ -4,7 +4,16 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+const path = require("path");
 module.exports = {
   /* Your site config here */
-  plugins: [],
-}
+  plugins: [
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: "gatsby-plugin-resolve-src",
+      options: {
+        srcPath: path.resolve(__dirname, "src"),
+      },
+    },
+  ],
+};
