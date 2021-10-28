@@ -18,7 +18,6 @@ export const Section = styled.section`
   grid-column: full-start / full-end;
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
-  min-height: 60vh;
   width: 100%;
 `;
 

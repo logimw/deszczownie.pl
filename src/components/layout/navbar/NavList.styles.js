@@ -32,6 +32,7 @@ export const StyledNavList = styled.ul`
     @media only screen and ${breakpoints.device.sm} {
       width: 100%;
     }
+
     &[open] {
       summary::after {
         transform: rotate(0);
@@ -51,6 +52,12 @@ export const StyledNavList = styled.ul`
       list-style: none;
       position: relative;
       padding-right: 1.5rem;
+
+      a {
+        @media only screen and ${breakpoints.device.sm} {
+          width: 40%;
+        }
+      }
 
       &::after,
       &::before {
@@ -115,6 +122,7 @@ export const StyledNavList = styled.ul`
       @media only screen and ${breakpoints.device.sm} {
         border-top: 1px solid ${({ theme }) => theme.colors.grey};
       }
+
       a {
         opacity: 0;
         animation: 300ms 100ms ease-in-out 1 forwards ${showListItem};
@@ -139,6 +147,7 @@ export const StyledNavList = styled.ul`
           border-bottom: 2px solid transparent;
         }
       }
+
       &:not(a.nav--active) {
         border-bottom: 1px solid ${({ theme }) => theme.colors.lightGrey};
         @media only screen and ${breakpoints.device.sm} {

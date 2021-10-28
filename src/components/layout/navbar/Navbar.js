@@ -14,8 +14,6 @@ const Navbar = () => {
     e.preventDefault();
     setIsActive(!isActive);
   };
-
-  // TODO: Clicking at vector on "oferta" sometimes causes unwanted action.
   useEffect(() => {
     window.onscroll = () => {
       if (window.pageYOffset >= 100) {
