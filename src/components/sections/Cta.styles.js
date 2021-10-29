@@ -15,7 +15,7 @@ export const StyledCta = styled(Section)`
   h3 {
     color: ${({ theme }) => theme.colors.white};
     font-size: ${({ theme }) => theme.fontSize.xxl};
-    max-width: 50%;
+    grid-column: 1;
   }
 
   .cta-bg {
@@ -31,7 +31,7 @@ export const StyledCta = styled(Section)`
       height: 100%;
       width: 100%;
       background-color: ${({ theme }) => theme.colors.secondary};
-      opacity: 0.9;
+      opacity: 0.95;
     }
   }
 `;
@@ -48,4 +48,11 @@ export const CtaContainer = styled.div`
 export const Container = styled.div`
   max-width: 140rem;
   margin: 0 auto;
+  height: 100%;
+  padding: 0 1.5rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  justify-items: center;
+  align-items: center;
 `;
