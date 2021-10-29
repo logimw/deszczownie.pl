@@ -50,7 +50,6 @@ export const Container = styled.div`
   margin: 0 auto;
   height: 100%;
   padding: 0 1.5rem;
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   justify-items: center;
