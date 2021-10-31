@@ -11,9 +11,14 @@ export const SliderWrapper = styled.div`
   overflow: hidden;
   grid-column: 1 / -1;
 
+  .gatsby-image-wrapper {
+    overflow: unset;
+  }
+
   .swiper-pagination-bullet {
     width: 25px;
     border-radius: 0;
+    transition: background-color 300ms ease-in-out;
 
     &.swiper-pagination-bullet-active {
       background-color: ${({ theme }) => theme.colors.white};
@@ -81,7 +86,8 @@ export const SliderWrapper = styled.div`
     img {
       //@media only screen and ${breakpoints.device.sm} {
       min-height: 75vh;
-      width: 100%;
+      //width: 100%;
+      width: 100vw;
       //}
     }
   }
@@ -89,7 +95,7 @@ export const SliderWrapper = styled.div`
 
 export const SliderContainer = styled.div`
   height: 100%;
-  padding: 3rem;
+  padding: 0 3rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -98,6 +104,7 @@ export const SliderContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 auto;
 
   h2 {
     color: ${({ theme }) => theme.colors.white};

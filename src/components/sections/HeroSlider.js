@@ -58,7 +58,6 @@ const HeroSlider = () => {
               src="../../assets/images/slider.jpg"
               alt="Slider 1"
               className="slider-bg"
-              layout={layout}
               quality={60}
               placeholder="blurred"
             />
@@ -81,7 +80,7 @@ const HeroSlider = () => {
               src="../../assets/images/slider2.jpg"
               alt="Slider 2"
               className="slider-bg"
-              layout={layout}
+              layout="constrained"
               quality={60}
               placeholder="blurred"
             />
