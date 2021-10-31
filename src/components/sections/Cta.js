@@ -13,7 +13,7 @@ const Cta = () => {
             Masz pytania? Zadzwoń lub skontaktuj się z nami przez formularz
             kontaktowy!
           </h3>
-          <Button>
+          <Button page="/kontakt">
             Kontakt
             <BsArrowRight />
           </Button>

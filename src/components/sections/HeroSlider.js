@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, Autoplay, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
 import {
   SliderContainer,
   SliderWrapper,
@@ -11,6 +12,8 @@ import {
 } from "./HeroSlider.styles";
 import { StaticImage } from "gatsby-plugin-image";
 import breakpoints from "../../assets/styles/breakpoints";
+import Button from "../button/Button";
+import { BsArrowRight } from "react-icons/bs";
 
 const HeroSlider = () => {
   let width;
@@ -31,10 +34,15 @@ const HeroSlider = () => {
   return (
     <SliderWrapper>
       <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={0}
         slidesPerView={1}
         navigation
+        loop={true}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: true,
+        }}
         pagination={{ clickable: true }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={swiper => console.log(swiper)}
@@ -52,6 +60,10 @@ const HeroSlider = () => {
                   deszczownie to sprawdzone rozwiązanie dla rolnictwa.
                 </p>
               </div>
+              <Button page="/oferta">
+                Zobacz ofertę
+                <BsArrowRight />
+              </Button>
             </SliderContainer>
 
             <StaticImage

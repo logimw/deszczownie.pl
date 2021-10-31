@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 export const StyledButton = styled(Link)`
-  width: 18rem;
+  min-width: 18rem;
   height: 5rem;
   background: ${({ theme }) => theme.colors.primary};
   border-radius: 2px;
@@ -17,6 +17,7 @@ export const StyledButton = styled(Link)`
   padding-left: 1.5rem;
   text-decoration: none;
   cursor: pointer;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 
   &:hover {
     svg {

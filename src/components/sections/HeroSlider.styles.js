@@ -98,12 +98,15 @@ export const SliderContainer = styled.div`
   padding: 0 3rem;
   position: absolute;
   top: 0;
-  left: 0;
   z-index: 9;
-  width: 50%;
+  max-width: 140rem;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   margin: 0 auto;
 
   h2 {
@@ -117,7 +120,11 @@ export const SliderContainer = styled.div`
     font-size: ${({ theme }) => theme.fontSize.l};
     text-shadow: 1px 1px 2px #000;
   }
+  a {
+    margin-top: 3rem;
+  }
   @media only screen and ${breakpoints.device.sm} {
-    width: 100%;
+    width: 80%;
+    padding-right: 3rem;
   }
 `;
