@@ -22,7 +22,7 @@ const Cta = () => {
 
       <StaticImage
         src="../../assets/images/slider.jpg"
-        alt="dupsko"
+        alt="Cta background"
         layout="fullWidth"
         className="cta-bg"
         quality={10}
