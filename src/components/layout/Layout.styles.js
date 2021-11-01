@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import breakpoints from "assets/styles/breakpoints";
+import marker from "assets/images/list-marker.png";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -24,4 +25,27 @@ export const Section = styled.section`
 export const Container = styled.div`
   max-width: 140rem;
   margin: 0 auto;
+`;
+
+export const GridContainer = styled(Container)`
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+`;
+
+export const TextBox = styled.div`
+  padding-top: 2rem;
+  p,
+  ul {
+    font-size: ${({ theme }) => theme.fontSize.m};
+    margin-bottom: 1.5rem;
+    list-style-position: inside;
+    list-style-image: url(${marker});
+    li {
+      position: relative;
+      span {
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
 `;
