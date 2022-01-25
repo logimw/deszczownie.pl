@@ -9,14 +9,7 @@ const Cta = () => {
     <StyledCta>
       <CtaContainer>
         <Container>
-          <h3>
-            Masz pytania? Zadzwoń lub skontaktuj się z nami przez formularz
-            kontaktowy!
-          </h3>
-          <Button page="/kontakt">
-            Kontakt
-            <BsArrowRight />
-          </Button>
+          <BsArrowRight />
         </Container>
       </CtaContainer>
 

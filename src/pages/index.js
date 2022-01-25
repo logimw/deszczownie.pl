@@ -12,6 +12,8 @@ const HomePage = () => {
       <Lead />
       <Cta />
       <Partners />
+      <Cta />
+      <Partners />
     </Layout>
   );
 };
