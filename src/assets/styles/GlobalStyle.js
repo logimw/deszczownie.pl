@@ -3,6 +3,7 @@ import breakpoints from "./breakpoints";
 
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&display=swap');
   html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -15,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
   }
-  body {
-    font-family: 'Lato', sans-serif;
+  body, a, button {
+    font-family: 'IBM Plex Sans', sans-serif;
   }
 `;

@@ -34,6 +34,20 @@ export const GridContainer = styled(Container)`
 
 export const TextBox = styled.div`
   padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2.5rem;
+  ul {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  > div {
+    grid-column: 1;
+  }
+
+  .second-col {
+    grid-column: 2;
+  }
   p,
   ul {
     font-size: ${({ theme }) => theme.fontSize.m};
@@ -42,6 +56,7 @@ export const TextBox = styled.div`
     list-style-image: url(${marker});
     li {
       position: relative;
+      margin-bottom: 1rem;
       span {
         position: absolute;
         top: 0;

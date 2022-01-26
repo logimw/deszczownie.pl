@@ -10,7 +10,7 @@ export const StyledSectionTitle = styled.div`
     text-transform: uppercase;
     text-align: center;
     background: ${({ theme }) => theme.colors.white};
-    max-width: 70rem;
+    max-width: 100rem;
     margin: 0 auto;
     z-index: 1;
     position: relative;
@@ -20,6 +20,13 @@ export const StyledSectionTitle = styled.div`
     @media only screen and ${breakpoints.device.xs} {
       max-width: 35rem;
     }
+  }
+
+  .subtitle {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .heading-decoration-container {
     height: 4rem;

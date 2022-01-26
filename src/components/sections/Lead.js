@@ -5,13 +5,19 @@ import { StaticImage } from "gatsby-plugin-image";
 import { ImgWrapper, LeadWrapper } from "./Lead.styles";
 import Button from "../button/Button";
 import IconWrapper from "../layout/IconWrapper";
+import { BsArrowRight } from "react-icons/bs";
+import Drops from "../../assets/svg/water-drops.svg";
+import Subheading from "../elements/Subheading";
 
 const Lead = () => {
   return (
     <Section>
       <GridContainer>
         <LeadWrapper isPrimary>
-          <IconWrapper>sprawdzone rozwiązania</IconWrapper>
+          <IconWrapper>
+            <img src={Drops} alt="water drops" />
+            <h5>Sprawdzone rozwiązania</h5>
+          </IconWrapper>
           <IconWrapper isBottom isLogo>
             <StaticImage
               src="../../assets/images/rm-logo.png"
@@ -30,9 +36,7 @@ const Lead = () => {
         </LeadWrapper>
         <LeadWrapper>
           <Heading>
-            <div className="subheading green">
-              <p>Dystrybucja maszyn RM</p>
-            </div>
+            <Subheading color={"green"} />
             <h1> Oferujemy sprawdzone rozwiązania w nawadnianiu!</h1>
           </Heading>
           <TextBox>
@@ -44,16 +48,18 @@ const Lead = () => {
                 Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
               </b>
             </p>
-            <p>
-              Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-              Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-              Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-              Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-              Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-              Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-              Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-              Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-            </p>
+            <div>
+              <p>
+                Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
+                Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
+                Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
+                Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
+              </p>
+              <p>Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!</p>
+            </div>
+            <div className="second-col">
+              <p>Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!</p>
+            </div>
             <ul>
               <li>
                 <span>sprawdzone rozwiązania</span>
@@ -68,8 +74,10 @@ const Lead = () => {
                 <span>sprawdzone rozwiązania</span>
               </li>
             </ul>
+            <Button page="/oferta">
+              Spawdź ofertę <BsArrowRight />
+            </Button>
           </TextBox>
-          <Button page="/oferta">Spawdź ofertę</Button>
         </LeadWrapper>
       </GridContainer>
     </Section>
