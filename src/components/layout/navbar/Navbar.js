@@ -9,14 +9,15 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
+  const windowGlobal = typeof window !== "undefined" && window;
 
   const onClick = e => {
     e.preventDefault();
     setIsActive(!isActive);
   };
   useEffect(() => {
-    window.onscroll = () => {
-      if (window.pageYOffset >= 100) {
+    windowGlobal.onscroll = () => {
+      if (windowGlobal.pageYOffset >= 100) {
         setScrolled(true);
       } else {
         setScrolled(false);

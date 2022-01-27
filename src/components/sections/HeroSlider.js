@@ -18,9 +18,9 @@ import { BsArrowRight } from "react-icons/bs";
 const HeroSlider = () => {
   let width;
   const [layout, setLayout] = useState("");
-  console.log(window.innerWidth);
+  const windowGlobal = typeof window !== "undefined" && window;
   useEffect(() => {
-    if (window.innerWidth < parseInt(breakpoints.size.sm)) {
+    if (windowGlobal.innerWidth < parseInt(breakpoints.size.sm)) {
       width = 770;
       setLayout("fixed");
     } else {

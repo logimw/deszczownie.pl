@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 export const useDetectOutsideClick = (el, initialState) => {
   const [isActive, setIsActive] = useState(initialState);
+  const windowGlobal = typeof window !== "undefined" && window;
 
   useEffect(() => {
     const onClick = e => {
@@ -10,11 +11,11 @@ export const useDetectOutsideClick = (el, initialState) => {
       }
     };
     if (isActive) {
-      window.addEventListener("click", onClick);
+      windowGlobal.addEventListener("click", onClick);
     }
 
     return () => {
-      window.removeEventListener("click", onClick);
+      windowGlobal.removeEventListener("click", onClick);
     };
   }, [isActive]);
 
