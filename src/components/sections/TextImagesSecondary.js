@@ -1,12 +1,18 @@
 import React from "react";
 import SectionTitle from "./SectionTitle";
 import { Container, Section, TextBox } from "../layout/Layout.styles";
-import { GridImages, GridWrapper } from "./TextImages.styles";
+import {
+  GridContainer,
+  GridImages,
+  GridWrapper,
+  WrapperImages,
+} from "./TextImages.styles";
 import Button from "../button/Button";
 import { BsArrowRight } from "react-icons/bs";
 import { StaticImage } from "gatsby-plugin-image";
+import OfferItem from "../elements/OfferItem";
 
-const TextImages = () => {
+const TextImagesSecondary = () => {
   return (
     <Section>
       <SectionTitle
@@ -14,7 +20,7 @@ const TextImages = () => {
         subtitle="Dystrybucja maszyn RM"
       />
       <Container>
-        <GridWrapper>
+        <GridContainer>
           <TextBox>
             <div className="full-col">
               <p className="lead">
@@ -37,41 +43,25 @@ const TextImages = () => {
               </Button>
             </div>
           </TextBox>
-          <GridImages>
-            <div className="item">
-              <StaticImage
-                src="../../assets/images/rm-logo.png"
-                alt="RM Logo"
-                quality={60}
-                layout="fixed"
-                placeholder="blurred"
-              />
-            </div>
-            <div className="item">
-              {" "}
-              <StaticImage
-                src="../../assets/images/d1.png"
-                alt="Dzezczwonia 1"
-                quality={60}
-                layout="fixed"
-                placeholder="blurred"
-              />
-            </div>
-            <div className="item">
-              {" "}
-              <StaticImage
-                src="../../assets/images/d2.png"
-                alt="Dzezczwonia 2"
-                quality={60}
-                layout="fixed"
-                placeholder="blurred"
-              />
-            </div>
-          </GridImages>
-        </GridWrapper>
+          <OfferItem img={"../../assets/images/slider.jpg"} />
+          <WrapperImages>
+            <StaticImage
+              src="../../assets/images/d1.png"
+              alt="test"
+              placeholder="blurred"
+              layout="fullWidth"
+            />
+            <StaticImage
+              src="../../assets/images/d4.png"
+              alt="test"
+              placeholder="blurred"
+              layout="fullWidth"
+            />
+          </WrapperImages>
+        </GridContainer>
       </Container>
     </Section>
   );
 };
 
-export default TextImages;
+export default TextImagesSecondary;

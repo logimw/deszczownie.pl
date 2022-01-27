@@ -3,6 +3,7 @@ import breakpoints from "assets/styles/breakpoints";
 import marker from "assets/images/list-marker.png";
 
 export const Wrapper = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&display=swap");
   width: 100%;
   display: grid;
   grid-template-columns:
@@ -10,6 +11,7 @@ export const Wrapper = styled.div`
     [container-end] 1fr 15px [full-end];
   margin: 0;
   padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
   @media only screen and ${breakpoints.device.sm} {
     grid-template-columns: [full-start] 15px 1fr 1fr 1fr 15px [full-end];
   }
@@ -37,6 +39,10 @@ export const TextBox = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2.5rem;
+
+  .full-col {
+    grid-column: 1 / -1;
+  }
   ul {
     grid-column: 2;
     grid-row: 1;
@@ -47,6 +53,9 @@ export const TextBox = styled.div`
 
   .second-col {
     grid-column: 2;
+  }
+  p.lead {
+    font-size: 2.4rem;
   }
   p,
   ul {

@@ -27,6 +27,9 @@ export const StyledSectionTitle = styled.div`
     top: -30px;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: ${({ theme }) => theme.colors.primary};
+    font-size: ${({ theme }) => theme.fontSize.m};
+    font-weight: 600;
   }
   .heading-decoration-container {
     height: 4rem;
