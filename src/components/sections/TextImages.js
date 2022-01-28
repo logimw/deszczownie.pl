@@ -43,7 +43,7 @@ const TextImages = () => {
                 src="../../assets/images/rm-logo.png"
                 alt="RM Logo"
                 quality={60}
-                layout="fixed"
+                layout="constrained"
                 placeholder="blurred"
               />
             </div>
@@ -53,7 +53,7 @@ const TextImages = () => {
                 src="../../assets/images/d1.png"
                 alt="Dzezczwonia 1"
                 quality={60}
-                layout="fixed"
+                layout="constrained"
                 placeholder="blurred"
               />
             </div>
@@ -63,7 +63,7 @@ const TextImages = () => {
                 src="../../assets/images/d2.png"
                 alt="Dzezczwonia 2"
                 quality={60}
-                layout="fixed"
+                layout="constrained"
                 placeholder="blurred"
               />
             </div>

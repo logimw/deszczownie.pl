@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import breakpoints from "../../assets/styles/breakpoints";
 
 export const StyledCtaFeature = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
@@ -12,6 +13,10 @@ export const StyledCtaFeature = styled.div`
   padding: 5rem;
   text-align: center;
   row-gap: 3rem;
+  @media only screen and ${breakpoints.device.m} {
+    padding: 3rem 2rem;
+    row-gap: 1rem;
+  }
 
   h5 {
     font-size: 1.8rem;

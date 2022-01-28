@@ -1,12 +1,7 @@
 import React from "react";
 import SectionTitle from "./SectionTitle";
 import { Container, Section, TextBox } from "../layout/Layout.styles";
-import {
-  GridContainer,
-  GridImages,
-  GridWrapper,
-  WrapperImages,
-} from "./TextImages.styles";
+import { GridContainer, WrapperImages } from "./TextImages.styles";
 import Button from "../button/Button";
 import { BsArrowRight } from "react-icons/bs";
 import { StaticImage } from "gatsby-plugin-image";

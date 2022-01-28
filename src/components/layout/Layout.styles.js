@@ -27,6 +27,7 @@ export const Section = styled.section`
 export const Container = styled.div`
   max-width: 140rem;
   margin: 0 auto;
+  padding: 0 1.5rem;
 `;
 
 export const GridContainer = styled(Container)`
@@ -37,35 +38,54 @@ export const GridContainer = styled(Container)`
 export const TextBox = styled.div`
   padding-top: 2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-gap: 2.5rem;
+  grid-template-columns: 1fr 1fr;
+  @media only screen and ${breakpoints.device.lg} {
+    grid-template-columns: 1fr;
+  }
 
   .full-col {
     grid-column: 1 / -1;
   }
+
   ul {
     grid-column: 2;
     grid-row: 1;
+    @media only screen and ${breakpoints.device.lg} {
+      grid-column: 1;
+      grid-row: auto;
+    }
   }
+
   > div {
     grid-column: 1;
+    @media only screen and ${breakpoints.device.lg} {
+      grid-column: 1;
+    }
   }
 
   .second-col {
     grid-column: 2;
+    @media only screen and ${breakpoints.device.lg} {
+      grid-column: 1;
+    }
   }
+
   p.lead {
     font-size: 2.4rem;
   }
+
   p,
   ul {
     font-size: ${({ theme }) => theme.fontSize.m};
     margin-bottom: 1.5rem;
     list-style-position: inside;
     list-style-image: url(${marker});
+
     li {
       position: relative;
       margin-bottom: 1rem;
+
       span {
         position: absolute;
         top: 0;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Section } from "../layout/Layout.styles";
+import breakpoints from "../../assets/styles/breakpoints";
 
 export const StyledAboveCta = styled(Section)`
   grid-column: 1 / -1;
@@ -10,6 +11,10 @@ export const StyledAboveCta = styled(Section)`
   padding-bottom: 0;
   position: relative;
   z-index: 1;
+  @media only screen and ${breakpoints.device.sm} {
+    height: auto;
+    padding-bottom: 2.5rem;
+  }
 
   h3 {
     color: ${({ theme }) => theme.colors.white};
@@ -43,6 +48,18 @@ export const GridContainer = styled.div`
   grid-template-columns: 35% 45%;
   column-gap: 20%;
 
+  @media only screen and ${breakpoints.device.lg} {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+  }
+  @media only screen and ${breakpoints.device.m} {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5rem;
+  }
+  @media only screen and ${breakpoints.device.sm} {
+    grid-template-columns: 1fr;
+  }
+
   p {
     color: ${({ theme }) => theme.colors.white};
     font-size: ${({ theme }) => theme.fontSize.m};
@@ -56,4 +73,11 @@ export const CenteredContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 5rem;
+  @media only screen and ${breakpoints.device.m} {
+    grid-gap: 2.5rem;
+  }
+  @media only screen and ${breakpoints.device.sm} {
+    margin: 1.5rem auto 0;
+    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+  }
 `;

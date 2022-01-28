@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import breakpoints from "../../assets/styles/breakpoints";
 
 export const StyledOfferItem = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
@@ -36,6 +37,10 @@ export const StyledOfferItem = styled.div`
 
   .offer-item-container {
     padding: 3.5rem;
+
+    @media only screen and ${breakpoints.device.m} {
+      padding: 2.5rem;
+    }
   }
 
   .img-container {
@@ -53,6 +58,9 @@ export const StyledOfferItem = styled.div`
   .offer-item-header {
     padding-bottom: 4rem;
     border-bottom: 2px solid ${({ theme }) => theme.colors.greySecondary};
+    @media only screen and ${breakpoints.device.m} {
+      padding-bottom: 2rem;
+    }
   }
 
   .offer-item-text {
@@ -92,4 +100,12 @@ export const GridContainer = styled.div`
 
   margin-top: 7.5rem;
   margin-bottom: 7.5rem;
+
+  @media only screen and ${breakpoints.device.m} {
+    grid-gap: 2rem;
+  }
+  @media only screen and ${breakpoints.device.sm} {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 `;

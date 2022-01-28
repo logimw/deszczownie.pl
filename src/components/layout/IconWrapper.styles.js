@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import breakpoints from "../../assets/styles/breakpoints";
 
 export const StyledIconWrapper = styled.div`
   display: flex;
@@ -21,6 +22,21 @@ export const StyledIconWrapper = styled.div`
   font-size: 2.4rem;
   box-shadow: ${({ isLogo }) =>
     isLogo ? "transparent" : "2px 2px 2px rgba(0, 0, 0, 0.3)"};
+
+  @media only screen and ${breakpoints.device.lg} {
+    height: 17rem;
+    width: 17rem;
+    top: -1.5rem;
+    left: -1.5rem;
+    font-size: 1.6rem;
+    font-weight: normal;
+  }
+
+  img {
+    @media only screen and ${breakpoints.device.lg} {
+      max-width: 5rem;
+    }
+  }
 
   h5 {
     margin-top: 1.5rem;
