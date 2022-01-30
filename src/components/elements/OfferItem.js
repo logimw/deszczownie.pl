@@ -8,15 +8,18 @@ const OfferItem = ({ img }) => {
   return (
     <StyledOfferItem>
       <a href="/oferta">
-        <div className="img-container">
-          <StaticImage
-            src={"../../assets/images/d3.png"}
-            alt="Test"
-            quality={60}
-            placeholder="blurred"
-            height={300}
-          />
-        </div>
+        {img && (
+          <div className="img-container">
+            <StaticImage
+              src={"../../assets/images/d3.png"}
+              alt="Test"
+              quality={60}
+              placeholder="blurred"
+              height={300}
+            />
+          </div>
+        )}
+
         <div className="offer-item-container">
           <div className="offer-item-header">
             <h5>Skuteczne nawadanianie roślin</h5>
@@ -28,7 +31,7 @@ const OfferItem = ({ img }) => {
               Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
             </p>
           </div>
-          <Button page={"/oferta"}>
+          <Button page={"/oferta"} secondary>
             Zobacz produkt <BsArrowRight />
           </Button>
         </div>

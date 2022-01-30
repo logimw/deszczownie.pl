@@ -1,11 +1,11 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
-import { Section } from "../components/layout/Layout.styles";
+import Partners from "../components/sections/Partners";
 
 const AboutPage = () => {
   return (
     <Layout>
-      <Section>test</Section>
+      <Partners />
     </Layout>
   );
 };

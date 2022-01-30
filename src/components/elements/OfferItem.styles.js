@@ -56,16 +56,16 @@ export const StyledOfferItem = styled.div`
   }
 
   .offer-item-header {
-    padding-bottom: 4rem;
     border-bottom: 2px solid ${({ theme }) => theme.colors.greySecondary};
+    padding-bottom: ${({ img }) => (img ? `4rem` : `1rem`)};
     @media only screen and ${breakpoints.device.m} {
-      padding-bottom: 2rem;
+      padding-bottom: ${({ img }) => (img ? `2rem` : `1rem`)};
     }
   }
 
   .offer-item-text {
-    padding-top: 3.5rem;
-    padding-bottom: 4rem;
+    padding-bottom: ${({ img }) => (img ? `4rem` : `2rem`)};
+    padding-top: ${({ img }) => (img ? `3.5rem` : `2.5rem`)};
   }
 
   h5 {
@@ -78,24 +78,25 @@ export const StyledOfferItem = styled.div`
     color: #828282;
   }
 
-  &:hover {
-    svg {
-      fill: ${({ theme }) => theme.colors.secondary};
-    }
-  }
-
-  svg {
-    transition: fill 300ms ease-in-out;
-    margin-left: 1.5rem;
-    width: 5rem;
-    height: 5rem;
-    fill: ${({ theme }) => theme.colors.primary};
-  }
+  // &:hover {
+  //   svg {
+  //     fill: ${({ theme }) => theme.colors.secondary};
+  //   }
+  // }
+  //
+  // svg {
+  //   transition: fill 300ms ease-in-out;
+  //   margin-left: 1.5rem;
+  //   width: 5rem;
+  //   height: 5rem;
+  //   fill: ${({ theme }) => theme.colors.primary};
+  // }
 `;
 
 export const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: ${({ img }) =>
+    img ? `repeat(3, 1fr)` : `repeat(4, 1fr)`};
   grid-gap: 3.5rem;
 
   margin-top: 7.5rem;
