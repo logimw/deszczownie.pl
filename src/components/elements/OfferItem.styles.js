@@ -95,8 +95,8 @@ export const StyledOfferItem = styled.div`
 
 export const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: ${({ img }) =>
-    img ? `repeat(3, 1fr)` : `repeat(4, 1fr)`};
+  grid-template-columns: ${({ primary }) =>
+    primary ? `repeat(3, 1fr)` : `repeat(4, 1fr)`};
   grid-gap: 3.5rem;
 
   margin-top: 7.5rem;

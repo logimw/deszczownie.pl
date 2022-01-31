@@ -15,7 +15,7 @@ const SectionGray = () => {
             Oferujemy sprawdzone rozwiązania w nawadnianiu!
           </h2>
         </Heading>
-        <GridContainer>
+        <GridContainer primary>
           <OfferItem img={"../../assets/images/slider.jpg"} />
           <OfferItem img={"../../assets/images/slider.jpg"} />
           <OfferItem img={"../../assets/images/slider.jpg"} />

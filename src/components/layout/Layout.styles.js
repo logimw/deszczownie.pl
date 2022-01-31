@@ -22,6 +22,15 @@ export const Section = styled.section`
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
   width: 100%;
+
+  .hero {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    @media only screen and ${breakpoints.device.m} {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
 `;
 
 export const Container = styled.div`
