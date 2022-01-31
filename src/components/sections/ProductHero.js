@@ -10,7 +10,7 @@ const ProductHero = () => {
   return (
     <ProductHeroStyles>
       <StaticImage
-        src="../assets/images/hero-product.png"
+        src="../../assets/images/hero-product.png"
         alt="Slider 1"
         className="slider-bg"
         quality={60}
