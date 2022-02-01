@@ -4,6 +4,7 @@ import { Container } from "../layout/Layout.styles";
 export const ProductHeroStyles = styled.header`
   grid-column: full-start / full-end;
   max-height: 70rem;
+  overflow: hidden;
   position: relative;
 `;
 

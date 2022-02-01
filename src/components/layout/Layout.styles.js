@@ -37,6 +37,13 @@ export const Container = styled.div`
   max-width: 140rem;
   margin: 0 auto;
   padding: 0 1.5rem;
+
+  .first-col {
+    grid-column: 1 / 6;
+  }
+  .second-col {
+    grid-column: 8 / 6 span;
+  }
 `;
 
 export const GridContainer = styled(Container)`
