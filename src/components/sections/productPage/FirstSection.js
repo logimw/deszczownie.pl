@@ -35,19 +35,25 @@ const FirstSection = () => {
               </p>
               <ul className="product-features-list">
                 <li>
-                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                  odit aut fugit, sed quia consequuntur magni dolores eos qui
-                  ratione voluptatem sequi nesciunt.
+                  <div>
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                    odit aut fugit, sed quia consequuntur magni dolores eos qui
+                    ratione voluptatem sequi nesciunt.
+                  </div>
                 </li>
                 <li>
-                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                  odit aut fugit, sed quia consequuntur magni dolores eos qui
-                  ratione voluptatem sequi nesciunt.
+                  <div>
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                    odit aut fugit, sed quia consequuntur magni dolores eos qui
+                    ratione voluptatem sequi nesciunt.
+                  </div>
                 </li>
                 <li>
-                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                  odit aut fugit, sed quia consequuntur magni dolores eos qui
-                  ratione voluptatem sequi nesciunt.
+                  <div>
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                    odit aut fugit, sed quia consequuntur magni dolores eos qui
+                    ratione voluptatem sequi nesciunt.
+                  </div>
                 </li>
               </ul>
             </div>

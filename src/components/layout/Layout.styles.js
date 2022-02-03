@@ -56,6 +56,10 @@ export const TextBox = styled.div`
   display: grid;
   grid-gap: 2.5rem;
   grid-template-columns: 1fr 1fr;
+
+  p {
+  }
+
   @media only screen and ${breakpoints.device.lg} {
     grid-template-columns: 1fr;
   }
@@ -91,11 +95,34 @@ export const TextBox = styled.div`
     font-size: 2.4rem;
   }
 
+  ul.product-features-list {
+    list-style: none;
+
+    div {
+      padding-left: 7.5rem;
+      position: relative;
+
+      &::after {
+        content: "";
+        background-color: ${({ theme }) => theme.colors.primary};
+        height: 1.25rem;
+        width: 1.25rem;
+        position: absolute;
+        left: 0;
+        top: 5px;
+      }
+    }
+    li {
+      position: relative;
+    }
+  }
+
   p,
   ul {
     font-size: ${({ theme }) => theme.fontSize.m};
     margin-bottom: 1.5rem;
     list-style-position: inside;
+    color: ${({ theme }) => theme.colors.greyFont};
     list-style-image: url(${marker});
 
     li {
