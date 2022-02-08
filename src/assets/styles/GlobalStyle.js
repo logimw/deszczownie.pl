@@ -15,6 +15,8 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
     padding: 0;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   body, a, button {
     font-family: 'IBM Plex Sans', sans-serif;

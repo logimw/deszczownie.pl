@@ -19,11 +19,7 @@ const Lead = () => {
             <h5>Sprawdzone rozwiązania</h5>
           </IconWrapper>
           <IconWrapper isBottom isLogo>
-            <StaticImage
-              src="../../assets/images/rm-logo.png"
-              alt="RM logo"
-              layout="fullWidth"
-            />{" "}
+            <StaticImage src="../../assets/images/rm-logo.png" alt="RM logo" />{" "}
           </IconWrapper>
           <ImgWrapper>
             <StaticImage

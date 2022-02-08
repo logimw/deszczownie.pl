@@ -1,11 +1,15 @@
 import styled from "styled-components";
 import { Container } from "../layout/Layout.styles";
+import breakpoints from "../../assets/styles/breakpoints";
 
 export const ProductHeroStyles = styled.header`
   grid-column: full-start / full-end;
   max-height: 70rem;
   overflow: hidden;
   position: relative;
+  @media only screen and ${breakpoints.device.m} {
+    min-height: 50vh;
+  }
 `;
 
 export const ProductContainerStyles = styled(Container)`
@@ -17,4 +21,8 @@ export const ProductContainerStyles = styled(Container)`
   height: 100%;
   display: flex;
   align-items: center;
+  @media only screen and ${breakpoints.device.m} {
+    align-items: end;
+    padding-bottom: 2.5rem;
+  }
 `;

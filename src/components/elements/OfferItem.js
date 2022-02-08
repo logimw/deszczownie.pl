@@ -4,7 +4,7 @@ import { StyledOfferItem } from "./OfferItem.styles";
 import { StaticImage } from "gatsby-plugin-image";
 import Button from "../button/Button";
 
-const OfferItem = ({ img }) => {
+const OfferItem = ({ img, description }) => {
   return (
     <StyledOfferItem>
       <a href="/oferta">
@@ -31,9 +31,11 @@ const OfferItem = ({ img }) => {
               Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
             </p>
           </div>
-          <Button page={"/oferta"} secondary>
-            Zobacz produkt <BsArrowRight />
-          </Button>
+          {!description && (
+            <Button page={"/oferta"} secondary>
+              Zobacz produkt <BsArrowRight />
+            </Button>
+          )}
         </div>
       </a>
     </StyledOfferItem>

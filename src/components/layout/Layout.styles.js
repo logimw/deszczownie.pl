@@ -38,11 +38,38 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 0 1.5rem;
 
+  .full-col {
+    grid-column: 1 / -1;
+  }
+
   .first-col {
     grid-column: 1 / 6;
+    @media only screen and ${breakpoints.device.m} {
+      grid-column: 1 / -1;
+    }
   }
+
   .second-col {
     grid-column: 8 / 6 span;
+    @media only screen and ${breakpoints.device.m} {
+      grid-column: 3 / 11;
+      margin-top: 5rem;
+    }
+    @media only screen and ${breakpoints.device.sm} {
+      grid-column: 2 / 12;
+    }
+    @media only screen and ${breakpoints.device.xs} {
+      grid-column: 1 / -1;
+    }
+
+    img {
+      @media only screen and ${breakpoints.device.m} {
+        max-width: 80rem;
+      }
+      @media only screen and ${breakpoints.device.sm} {
+        max-width: 60rem;
+      }
+    }
   }
 `;
 
@@ -60,12 +87,46 @@ export const TextBox = styled.div`
   p {
   }
 
-  @media only screen and ${breakpoints.device.lg} {
-    grid-template-columns: 1fr;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      text-align: left;
+      font-size: 1.6rem;
+      color: ${({ theme }) => theme.colors.secondary};
+    }
+
+    th,
+    td {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+
+    thead {
+      th {
+        border-bottom: 2px solid ${({ theme }) => theme.colors.secondary};
+      }
+    }
+
+    tbody {
+      font-size: 1.4rem;
+      color: ${({ theme }) => theme.colors.greyFont};
+    }
+
+    tr {
+      td {
+        border-bottom: 1px solid ${({ theme }) => theme.colors.greyFont};
+        &:first-child {
+          color: ${({ theme }) => theme.colors.secondary};
+          font-weight: bold;
+        }
+      }
+    }
   }
 
-  .full-col {
-    grid-column: 1 / -1;
+  @media only screen and ${breakpoints.device.lg} {
+    grid-template-columns: 1fr;
   }
 
   ul {
@@ -112,6 +173,7 @@ export const TextBox = styled.div`
         top: 5px;
       }
     }
+
     li {
       position: relative;
     }

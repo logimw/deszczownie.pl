@@ -3,17 +3,22 @@ import Layout from "../components/layout/Layout";
 import Partners from "../components/sections/Partners";
 import Cta from "../components/sections/Cta";
 import ProductHero from "../components/sections/ProductHero";
-import FirstSection from "../components/sections/productPage/FirstSection";
+import ProductSection from "../components/sections/productPage/ProductSection";
 
-const ContactPage = () => {
+const ProductPage = () => {
   return (
     <Layout>
       <ProductHero />
-      <FirstSection />
+      <ProductSection title={"Zalety deszczowni RM"} />
+      <ProductSection
+        title={"Parametry deszczowni RM"}
+        lead={true}
+        isSecondary
+      />
       <Cta />
       <Partners />
     </Layout>
   );
 };
 
-export default ContactPage;
+export default ProductPage;
