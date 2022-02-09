@@ -4,7 +4,18 @@ import { StyledOfferItem } from "./OfferItem.styles";
 import { StaticImage } from "gatsby-plugin-image";
 import Button from "../button/Button";
 
-const OfferItem = ({ img, description }) => {
+const OfferItem = ({ img, title, description }) => {
+  const getHeader = () => {
+    return (
+      <div className="offer-item-header">
+        {description ? (
+          <h1>{title}</h1>
+        ) : (
+          <h5>{title || "Skuteczne nawadanianie roślin"}</h5>
+        )}
+      </div>
+    );
+  };
   return (
     <StyledOfferItem>
       <a href="/oferta">
@@ -21,9 +32,7 @@ const OfferItem = ({ img, description }) => {
         )}
 
         <div className="offer-item-container">
-          <div className="offer-item-header">
-            <h5>Skuteczne nawadanianie roślin</h5>
-          </div>
+          {getHeader()}
           <div className="offer-item-text">
             <p>
               Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!

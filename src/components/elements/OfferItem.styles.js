@@ -67,6 +67,10 @@ export const StyledOfferItem = styled.div`
     padding-bottom: ${({ img }) => (img ? `4rem` : `2rem`)};
     padding-top: ${({ img }) => (img ? `3.5rem` : `2.5rem`)};
   }
+  h1 {
+    color: ${({ theme }) => theme.colors.secondary};
+    font-size: 4rem;
+  }
 
   h5 {
     font-size: 1.8rem;

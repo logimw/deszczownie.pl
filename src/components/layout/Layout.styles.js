@@ -95,6 +95,9 @@ export const TextBox = styled.div`
       text-align: left;
       font-size: 1.6rem;
       color: ${({ theme }) => theme.colors.secondary};
+      @media only screen and ${breakpoints.device.sm} {
+        font-size: 1.3rem;
+      }
     }
 
     th,
@@ -112,6 +115,9 @@ export const TextBox = styled.div`
     tbody {
       font-size: 1.4rem;
       color: ${({ theme }) => theme.colors.greyFont};
+      @media only screen and ${breakpoints.device.sm} {
+        font-size: 1.2rem;
+      }
     }
 
     tr {

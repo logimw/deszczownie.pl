@@ -31,6 +31,19 @@ export const StyledSectionTitle = styled.div`
     font-size: ${({ theme }) => theme.fontSize.m};
     font-weight: 600;
   }
+
+  .lead {
+    position: absolute;
+    bottom: -15rem;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: ${({ theme }) => theme.colors.secondary};
+    font-size: ${({ theme }) => theme.fontSize.l};
+    font-weight: 600;
+    max-width: 66rem;
+  }
+
   .heading-decoration-container {
     height: 4rem;
     width: 100%;

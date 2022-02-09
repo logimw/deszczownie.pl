@@ -3,7 +3,6 @@ import { Container } from "../layout/Layout.styles";
 import Heading from "../layout/typography/Heading";
 import { SectionGrayStyles } from "./SectionGray.styles";
 import OfferItem from "../elements/OfferItem";
-import Product from "../../assets/images/slider.jpg";
 import { GridContainer } from "../elements/OfferItem.styles";
 
 const SectionGray = () => {
