@@ -14,6 +14,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@googlemaps/react-wrapper": "^1.1.23",
     "babel-plugin-styled-components": "^1.13.3",
     "gatsby": "^4.0.0",
     "gatsby-plugin-image": "^2.0.0",

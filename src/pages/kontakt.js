@@ -1,12 +1,12 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
 import { Section } from "../components/layout/Layout.styles";
-import Map from "../components/sections/Map";
+import WrapperMap from "../components/sections/WrapperMap";
 
 const ContactPage = () => {
   return (
     <Layout>
-      <Map />
+      <WrapperMap />
       <Section>kontakt</Section>
     </Layout>
   );
