@@ -1,13 +1,13 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
-import { Section } from "../components/layout/Layout.styles";
-import WrapperMap from "../components/sections/WrapperMap";
+import WrapperMap from "../components/sections/contactPage/WrapperMap";
+import Contact from "../components/sections/contactPage/Contact";
 
 const ContactPage = () => {
   return (
     <Layout>
       <WrapperMap />
-      <Section>kontakt</Section>
+      <Contact />
     </Layout>
   );
 };

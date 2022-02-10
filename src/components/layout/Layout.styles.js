@@ -78,6 +78,12 @@ export const GridContainer = styled(Container)`
   grid-template-columns: repeat(12, 1fr);
 `;
 
+export const GridWrapper = styled(Container)`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10rem;
+`;
+
 export const TextBox = styled.div`
   padding-top: 2rem;
   display: grid;

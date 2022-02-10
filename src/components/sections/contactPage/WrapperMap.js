@@ -51,20 +51,39 @@ const Map = ({ onClick, onIdle, children, style, ...options }) => {
   );
 };
 
+const Marker = options => {
+  const [marker, setMarker] = useState(null);
+
+  useEffect(() => {
+    if (!marker) {
+      setMarker(new google.maps.Marker());
+    }
+    // remove marker from map on unmount
+    return () => {
+      if (marker) {
+        marker.setMap(null);
+      }
+    };
+  }, [marker]);
+
+  useEffect(() => {
+    if (marker) {
+      marker.setOptions(options);
+    }
+  }, [marker, options]);
+
+  return null;
+};
+
 const WrapperMap = () => {
-  const [clicks, setClicks] = useState([]);
-  const [zoom, setZoom] = useState(3); // initial zoom
-  const [center, setCenter] = useState({
-    lat: 0,
-    lng: 0,
-  });
-  const onClick = e => {
-    // avoid directly mutating state
-    setClicks([...clicks, e.latLng]);
+  const coords = {
+    lat: 52.18796,
+    lng: 17.32965,
   };
+  const [zoom, setZoom] = useState(11); // initial zoom
+  const [center, setCenter] = useState(coords);
 
   const onIdle = m => {
-    console.log("onIdle");
     setZoom(m.getZoom());
     setCenter(m.getCenter().toJSON());
   };
@@ -77,10 +96,11 @@ const WrapperMap = () => {
         <Map
           style={{ height: "100%" }}
           center={center}
-          onClick={onClick}
           onIdle={onIdle}
           zoom={zoom}
-        />
+        >
+          <Marker position={coords} />
+        </Map>
       </Wrapper>
     </MapStyles>
   );
