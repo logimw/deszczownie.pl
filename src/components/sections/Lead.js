@@ -70,7 +70,7 @@ const Lead = () => {
                 <span>sprawdzone rozwiązania</span>
               </li>
             </ul>
-            <Button page="/oferta">
+            <Button secondary page="/oferta">
               Spawdź ofertę <BsArrowRight />
             </Button>
           </TextBox>

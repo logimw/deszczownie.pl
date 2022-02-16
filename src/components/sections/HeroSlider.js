@@ -51,7 +51,7 @@ const HeroSlider = () => {
         <SwiperSlide>
           <StyledSlideContent>
             <SliderContainer>
-              <h2>Najlepsze deszczownie na rynku</h2>
+              <h1>Najlepsze deszczownie na rynku</h1>
               <div>
                 <p>
                   Oferujemy dystrybucję najlepszych maszyn nawadniających. Nasze

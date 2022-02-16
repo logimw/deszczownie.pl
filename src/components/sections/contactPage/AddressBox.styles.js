@@ -13,6 +13,7 @@ export const AddressItem = styled.div`
     margin-right: 1.5rem;
     height: 3.8rem;
     width: 3.8rem;
+    min-width: 3.8rem;
   }
 
   p {

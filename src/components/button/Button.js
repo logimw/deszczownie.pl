@@ -1,9 +1,14 @@
 import React from "react";
 import { StyledButton } from "./Button.styles";
 
-const Button = ({ children, page, secondary }) => {
+const Button = ({ children, page, size, secondary, tertiary }) => {
   return (
-    <StyledButton secondary={secondary} to={`${page}`}>
+    <StyledButton
+      secondary={secondary}
+      tertiary={tertiary}
+      to={`${page}`}
+      size={size}
+    >
       {children}
     </StyledButton>
   );

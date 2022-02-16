@@ -33,20 +33,22 @@ const Contact = () => {
   return (
     <Section>
       <GridWrapper>
-        <div>
+        <div className="col-1">
           <Heading>
             <h1>Kontakt</h1>
           </Heading>
           <TextBox>
-            <p>
-              Chcesz nawiązać współpracę? Szukasz podpowiedzi? Masz pytania?
-              Jesteśmy tu dla Ciebie! Zapraszamy do kontaktu.
-            </p>
+            <div className="col">
+              <p>
+                Chcesz nawiązać współpracę? Szukasz podpowiedzi? Masz pytania?
+                Jesteśmy tu dla Ciebie! Zapraszamy do kontaktu.
+              </p>
+            </div>
           </TextBox>
           <AddressBox data={contactData} />
         </div>
 
-        <div>
+        <div className="col-2">
           <Heading>
             <Subheading color="green" text="Zapraszamy do kontaktu" />
             <h2>Masz pytania? Napisz do nas!</h2>

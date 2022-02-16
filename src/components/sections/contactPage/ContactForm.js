@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../../button/Button";
 import Input from "./Input";
 import Checkbox from "./Checkbox";
+import { VscArrowRight } from "react-icons/vsc";
 
 const ContactForm = () => {
   return (
@@ -42,7 +43,9 @@ const ContactForm = () => {
           required
         />
 
-        <Button secondary>Wyślij wiadomość</Button>
+        <Button secondary>
+          Wyślij wiadomość <VscArrowRight />
+        </Button>
       </form>
     </div>
   );

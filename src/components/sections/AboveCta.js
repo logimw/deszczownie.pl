@@ -38,7 +38,9 @@ const AboveCta = () => {
               <Button page={"/oferta"}>
                 Sprawdź ofertę <BsArrowRight />
               </Button>
-              <Button page={"/kontakt"}>Skontaktuj się</Button>
+              <Button tertiary page={"/kontakt"}>
+                Skontaktuj się
+              </Button>
             </div>
           </div>
         </GridContainer>

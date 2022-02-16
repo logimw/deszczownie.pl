@@ -1,5 +1,6 @@
 import React from "react";
-import { BsEnvelope, BsFillTelephoneFill, BsPinAngle } from "react-icons/bs";
+import { BsEnvelope, BsPinAngle } from "react-icons/bs";
+import { AiOutlinePhone } from "react-icons/ai";
 import { FaRegAddressCard } from "react-icons/fa";
 import { AddressItem, StyledAddressBox } from "./AddressBox.styles";
 
@@ -33,7 +34,7 @@ const AddressBox = ({ data }) => {
         </div>
       </AddressItem>
       <AddressItem>
-        <BsFillTelephoneFill />
+        <AiOutlinePhone />
         <div>
           <p className="title">{phone.title}:</p>
           <p>

@@ -5,6 +5,19 @@ export const StyledSlideContent = styled.div`
   width: 100vw;
   overflow: hidden;
   height: 100%;
+
+  .slider-bg {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
 `;
 export const SliderWrapper = styled.div`
   height: 75vh;
@@ -109,6 +122,13 @@ export const SliderContainer = styled.div`
   align-items: flex-start;
   margin: 0 auto;
 
+  h1,
+  h2,
+  p {
+    max-width: 60rem;
+  }
+
+  h1,
   h2 {
     color: ${({ theme }) => theme.colors.white};
     font-size: ${({ theme }) => theme.fontSize.h2};

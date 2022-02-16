@@ -42,14 +42,14 @@ export const Container = styled.div`
     grid-column: 1 / -1;
   }
 
-  .first-col {
+  > .col-1 {
     grid-column: 1 / 6;
     @media only screen and ${breakpoints.device.m} {
       grid-column: 1 / -1;
     }
   }
 
-  .second-col {
+  > .col-2 {
     grid-column: 8 / 6 span;
     @media only screen and ${breakpoints.device.m} {
       grid-column: 3 / 11;
@@ -82,6 +82,18 @@ export const GridWrapper = styled(Container)`
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 10rem;
+
+  .col-1 {
+    @media only screen and ${breakpoints.device.m} {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .col-2 {
+    @media only screen and ${breakpoints.device.m} {
+      grid-column: 1 / -1;
+    }
+  }
 `;
 
 export const TextBox = styled.div`
@@ -89,9 +101,6 @@ export const TextBox = styled.div`
   display: grid;
   grid-gap: 2.5rem;
   grid-template-columns: 1fr 1fr;
-
-  p {
-  }
 
   table {
     width: 100%;
@@ -129,6 +138,7 @@ export const TextBox = styled.div`
     tr {
       td {
         border-bottom: 1px solid ${({ theme }) => theme.colors.greyFont};
+
         &:first-child {
           color: ${({ theme }) => theme.colors.secondary};
           font-weight: bold;
@@ -150,14 +160,18 @@ export const TextBox = styled.div`
     }
   }
 
-  > div {
+  .col {
+    grid-column: 1 / -1;
+  }
+
+  .col-1 {
     grid-column: 1;
     @media only screen and ${breakpoints.device.lg} {
       grid-column: 1;
     }
   }
 
-  .second-col {
+  .col-2 {
     grid-column: 2;
     @media only screen and ${breakpoints.device.lg} {
       grid-column: 1;
