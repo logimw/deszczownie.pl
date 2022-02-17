@@ -76,8 +76,7 @@ const Marker = options => {
 };
 
 const WrapperMap = () => {
-  const API_KEY = process.env.MAP_API_KEY;
-  console.log(API_KEY);
+  const API_KEY = process.env.GATSBY_MAP_API_KEY;
   const coords = {
     lat: 52.18796,
     lng: 17.32965,
