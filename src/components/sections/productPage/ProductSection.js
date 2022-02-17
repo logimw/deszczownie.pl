@@ -33,7 +33,7 @@ const ProductSection = ({ title, lead, isSecondary }) => {
               </TextBox>
             )}
           </div>
-          <div className="first-col">
+          <div className="col-1">
             <TextBox>
               <div className="full-col">
                 <table>
@@ -73,7 +73,7 @@ const ProductSection = ({ title, lead, isSecondary }) => {
               </div>
             </TextBox>
           </div>
-          <div className="second-col">
+          <div className="col-2">
             <StaticImage
               src="../../../assets/images/d5.png"
               alt="Deszczownia"
@@ -88,7 +88,7 @@ const ProductSection = ({ title, lead, isSecondary }) => {
     return (
       <Section>
         <GridContainer>
-          <div className="first-col">
+          <div className="col-1">
             <Heading>
               <div className="stripes">
                 <span className="stripe" />
@@ -147,7 +147,7 @@ const ProductSection = ({ title, lead, isSecondary }) => {
               </div>
             </TextBox>
           </div>
-          <div className="second-col">
+          <div className="col-2">
             <LeadWrapper>
               <IconWrapper>
                 <img src={Drops} alt="water drops" />

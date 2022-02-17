@@ -25,7 +25,7 @@ const AboutPage = () => {
       </Section>
       <SectionGrayStyles>
         <GridContainer>
-          <div className="first-col">
+          <div className="col-1">
             <Heading>
               <Subheading color={"green"} text="Kim jesteśmy?" />
               <h2 className="gray">O firmie</h2>
@@ -45,7 +45,7 @@ const AboutPage = () => {
             </TextBox>
           </div>
 
-          <div className="second-col">
+          <div className="col-2">
             <TextBox>
               <div className="full-col">
                 <p>
