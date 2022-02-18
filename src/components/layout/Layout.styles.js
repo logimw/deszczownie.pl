@@ -26,10 +26,6 @@ export const Section = styled.section`
   .hero {
     padding-top: 10rem;
     padding-bottom: 10rem;
-    @media only screen and ${breakpoints.device.m} {
-      padding-top: 5rem;
-      padding-bottom: 5rem;
-    }
   }
 `;
 

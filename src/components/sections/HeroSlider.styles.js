@@ -122,6 +122,15 @@ export const SliderContainer = styled.div`
   align-items: flex-start;
   margin: 0 auto;
 
+  & > * {
+    @media only screen and ${breakpoints.device.xl} {
+      margin-left: 5rem;
+      @media only screen and ${breakpoints.device.sm} {
+        margin-left: 0;
+      }
+    }
+  }
+
   h1,
   h2,
   p {

@@ -42,6 +42,10 @@ export const StyledSectionTitle = styled.div`
     font-size: ${({ theme }) => theme.fontSize.l};
     font-weight: 600;
     max-width: 66rem;
+    @media only screen and ${breakpoints.device.xs} {
+      bottom: -20rem;
+      width: 100%;
+    }
   }
 
   .heading-decoration-container {

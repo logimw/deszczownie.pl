@@ -24,9 +24,11 @@ export const StyledIconWrapper = styled.div`
     isLogo ? "transparent" : "2px 2px 2px rgba(0, 0, 0, 0.3)"};
 
   @media only screen and ${breakpoints.device.lg} {
+    display: none;
     height: 17rem;
     width: 17rem;
-    top: -1.5rem;
+    top: ${({ isBottom }) => (isBottom ? "auto" : "-5rem")};
+    bottom: ${({ isBottom }) => (isBottom ? "-10rem" : "auto")};
     left: -1.5rem;
     font-size: 1.6rem;
     font-weight: normal;
