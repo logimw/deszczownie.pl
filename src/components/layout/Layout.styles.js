@@ -180,6 +180,7 @@ export const TextBox = styled.div`
 
   p.lead {
     font-size: 2.4rem;
+    color: ${({ theme }) => theme.colors.secondary};
   }
 
   ul.product-features-list {

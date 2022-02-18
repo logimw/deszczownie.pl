@@ -26,8 +26,17 @@ export const StyledAboveCta = styled(Section)`
     display: flex;
     justify-content: space-between;
 
+    @media only screen and ${breakpoints.device.sm} {
+      flex-wrap: wrap;
+    }
+
     a {
       min-width: 22rem;
+      &:first-child {
+        @media only screen and ${breakpoints.device.sm} {
+          margin-bottom: 1.5rem;
+        }
+      }
     }
   }
 `;
