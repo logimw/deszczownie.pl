@@ -9,11 +9,27 @@ import TextImages from "../components/sections/TextImages";
 import SectionGray from "../components/sections/SectionGray";
 import TextImagesSecondary from "../components/sections/TextImagesSecondary";
 
+import { graphql, useStaticQuery } from "gatsby";
+
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        description
+        title
+        siteUrl
+      }
+    }
+  }
+`;
+
 const HomePage = () => {
+  const data = useStaticQuery(query);
+
   return (
     <Layout>
       <HeroSlider />
-      <Lead />
+      <Lead text={data.site.siteMetadata.title} />
       <AboveCta />
       <Cta />
       <TextImages />

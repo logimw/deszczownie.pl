@@ -15,9 +15,9 @@ const SectionGray = () => {
           </h2>
         </Heading>
         <GridContainer primary>
-          <OfferItem img={"../../assets/images/slider.jpg"} />
-          <OfferItem img={"../../assets/images/slider.jpg"} />
-          <OfferItem img={"../../assets/images/slider.jpg"} />
+          <OfferItem img={"../../assets/images/slider.jpg"} title={"test"} />
+          <OfferItem img={"../../assets/images/slider.jpg"} title={"test"} />
+          <OfferItem img={"../../assets/images/slider.jpg"} title={"test"} />
         </GridContainer>
       </Container>
     </SectionGrayStyles>

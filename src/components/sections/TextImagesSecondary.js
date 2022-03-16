@@ -38,7 +38,7 @@ const TextImagesSecondary = () => {
               </Button>
             </div>
           </TextBox>
-          <OfferItem img={"../../assets/images/slider.jpg"} />
+          <OfferItem img={"../../assets/images/slider.jpg"} title={"test"} />
           <WrapperImages>
             <StaticImage
               src="../../assets/images/d1.png"

@@ -100,11 +100,12 @@ export const StyledNavList = styled.ul`
     animation: 300ms ease-in-out 1 forwards ${showList};
     display: none;
     background: ${({ theme }) => theme.colors.secondary};
-    box-shadow: 1px 3px 4px #e3e3e3;
+    //box-shadow: 2px 2px 2px rgba(#e3e3e3, 0.5);
+    box-shadow: 2px 2px 2px rgba(168, 168, 168, 0.3);
     list-style: none;
-    border-left: 6px solid ${({ theme }) => theme.colors.lightGrey};
+    border-left: 3px solid ${({ theme }) => theme.colors.lightGrey};
     width: 100%;
-    max-width: 15rem;
+    max-width: 20rem;
 
     @media only screen and ${breakpoints.device.sm} {
       position: relative;

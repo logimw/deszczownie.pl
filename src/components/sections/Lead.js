@@ -9,7 +9,7 @@ import { BsArrowRight } from "react-icons/bs";
 import Drops from "../../assets/svg/water-drops.svg";
 import Subheading from "../elements/Subheading";
 
-const Lead = () => {
+const Lead = ({ text }) => {
   return (
     <Section>
       <GridContainer>
@@ -37,12 +37,7 @@ const Lead = () => {
           </Heading>
           <TextBox>
             <p>
-              <b>
-                Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-                Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-                Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-                Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-              </b>
+              <b>{text}</b>
             </p>
             <div>
               <p>

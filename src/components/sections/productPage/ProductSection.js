@@ -6,7 +6,7 @@ import IconWrapper from "../../layout/IconWrapper";
 import Drops from "../../../assets/svg/water-drops.svg";
 import { StaticImage } from "gatsby-plugin-image";
 
-const ProductSection = ({ title, lead, isSecondary }) => {
+const ProductSection = ({ title, lead, isSecondary, text }) => {
   if (isSecondary) {
     return (
       <Section>
@@ -109,41 +109,7 @@ const ProductSection = ({ title, lead, isSecondary }) => {
             )}
             <TextBox>
               <div className="full-col">
-                <p>
-                  Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-                  Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-                  Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-                  Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-                </p>
-                <p>
-                  Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-                  Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-                  Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-                  Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!
-                </p>
-                <ul className="product-features-list">
-                  <li>
-                    <div>
-                      Nemo enim ipsam voluptatem quia voluptas sit aspernatur
-                      aut odit aut fugit, sed quia consequuntur magni dolores
-                      eos qui ratione voluptatem sequi nesciunt.
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      Nemo enim ipsam voluptatem quia voluptas sit aspernatur
-                      aut odit aut fugit, sed quia consequuntur magni dolores
-                      eos qui ratione voluptatem sequi nesciunt.
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      Nemo enim ipsam voluptatem quia voluptas sit aspernatur
-                      aut odit aut fugit, sed quia consequuntur magni dolores
-                      eos qui ratione voluptatem sequi nesciunt.
-                    </div>
-                  </li>
-                </ul>
+                <p>{text}</p>
               </div>
             </TextBox>
           </div>

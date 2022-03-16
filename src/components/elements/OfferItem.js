@@ -2,9 +2,16 @@ import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { StyledOfferItem } from "./OfferItem.styles";
 import { StaticImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 import Button from "../button/Button";
+import slugify from "slugify";
 
 const OfferItem = ({ img, title, description }) => {
+  const slug = slugify(title, {
+    replacement: "-",
+    lower: true,
+  });
+  const link = `/oferta/${slug}` || "/oferta";
   const getHeader = () => {
     return (
       <div className="offer-item-header">
@@ -18,7 +25,7 @@ const OfferItem = ({ img, title, description }) => {
   };
   return (
     <StyledOfferItem>
-      <a href="/oferta">
+      <Link to={link}>
         {img && (
           <div className="img-container">
             <StaticImage
@@ -41,12 +48,12 @@ const OfferItem = ({ img, title, description }) => {
             </p>
           </div>
           {!description && (
-            <Button page={"/oferta"} secondary>
+            <Button page={link} secondary>
               Zobacz produkt <BsArrowRight />
             </Button>
           )}
         </div>
-      </a>
+      </Link>
     </StyledOfferItem>
   );
 };

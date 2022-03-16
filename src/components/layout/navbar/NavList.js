@@ -23,21 +23,6 @@ const NavList = ({ isOpen }) => {
         </SubMenuTrigger>
       </li>
       <li>
-        <StyledNavLink activeClassName="nav--active" to="/deszczownie">
-          Deszczownie
-        </StyledNavLink>
-      </li>
-      <li>
-        <StyledNavLink activeClassName="nav--active" to="/deszczownie">
-          Pompy
-        </StyledNavLink>
-      </li>
-      <li>
-        <StyledNavLink activeClassName="nav--active" to="/deszczownie">
-          Agregaty
-        </StyledNavLink>
-      </li>
-      <li>
         <StyledNavLink activeClassName="nav--active" to="/kontakt">
           Kontakt
         </StyledNavLink>
