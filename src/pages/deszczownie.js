@@ -8,7 +8,7 @@ import ProductSection from "../components/sections/productPage/ProductSection";
 const ProductPage = () => {
   return (
     <Layout>
-      <ProductHero />
+      <ProductHero title={"deszczownie"} />
       <ProductSection title={"Zalety deszczowni RM"} />
       <ProductSection
         title={"Parametry deszczowni RM"}

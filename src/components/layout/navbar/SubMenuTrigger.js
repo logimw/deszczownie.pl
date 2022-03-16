@@ -36,9 +36,9 @@ const SubMenuTrigger = ({ children }) => {
 
   // TODO: show products grouped by category OR rebuild menu.
 
-  for (const [key, value] of Object.entries(categories)) {
-    // value.forEach(item => console.log(`${key} - ${item.productName}`));
-  }
+  // for (const [key, value] of Object.entries(categories)) {
+  // value.forEach(item => console.log(`${key} - ${item.productName}`));
+  // }
   return (
     <details open={isActive} onClick={e => onClick(e)}>
       <summary ref={dropdownRef}>{children}</summary>
