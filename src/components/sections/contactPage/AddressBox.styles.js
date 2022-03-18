@@ -10,6 +10,8 @@ export const AddressItem = styled.div`
 
   svg {
     color: ${({ theme }) => theme.colors.primary};
+    fill: ${({ theme }) => theme.colors.primary};
+    stroke: ${({ theme }) => theme.colors.primary};
     margin-right: 1.5rem;
     height: 3.8rem;
     width: 3.8rem;
@@ -19,6 +21,7 @@ export const AddressItem = styled.div`
   p {
     font-size: 1.4rem;
     color: ${({ theme }) => theme.colors.secondary};
+    white-space: pre-line;
 
     a {
       color: ${({ theme }) => theme.colors.primary};

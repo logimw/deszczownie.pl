@@ -1,22 +1,25 @@
 import React from "react";
-import { BsEnvelope, BsPinAngle } from "react-icons/bs";
-import { AiOutlinePhone } from "react-icons/ai";
-import { FaRegAddressCard } from "react-icons/fa";
 import { AddressItem, StyledAddressBox } from "./AddressBox.styles";
+import {
+  LoadingIcon,
+  PhoneIcon,
+  EmailIcon,
+  AccountIcon,
+} from "assets/icons/Icons";
 
 const AddressBox = ({ data }) => {
   const { email, company, localization, phone } = data;
   return (
     <StyledAddressBox>
       <AddressItem>
-        <BsPinAngle />
+        <LoadingIcon />
         <div>
           <p className="title">{localization.title}:</p>
           <p>{localization.data}</p>
         </div>
       </AddressItem>
       <AddressItem>
-        <BsEnvelope />
+        <EmailIcon />
         <div>
           <p className="title">{email.title}:</p>
           <p>
@@ -25,16 +28,14 @@ const AddressBox = ({ data }) => {
         </div>
       </AddressItem>
       <AddressItem>
-        <FaRegAddressCard />
+        <AccountIcon />
         <div>
           <p className="title">{company.title}:</p>
-          <p>KMK Agro</p>
-          <p>D. Kaźmierczak C. Mądry M. Kaźmierczak Sp. j.</p>
-          <p>NIP: 786-15-72-061</p>
+          <p>{company.data}</p>
         </div>
       </AddressItem>
       <AddressItem>
-        <AiOutlinePhone />
+        <PhoneIcon />
         <div>
           <p className="title">{phone.title}:</p>
           <p>

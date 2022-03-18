@@ -7,7 +7,7 @@ import {
 } from "./Footer.styles";
 import Logo from "../navbar/Logo";
 import FooterLinks from "./FooterLinks";
-import MouseIcon from "../../../assets/svg/mouse.svg";
+import MouseIcon from "assets/svg/mouse.svg";
 
 const Footer = () => {
   return (

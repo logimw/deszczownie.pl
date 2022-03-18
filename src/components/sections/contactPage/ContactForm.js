@@ -35,13 +35,7 @@ const ContactForm = () => {
           placeholder="Wiadomość..."
           required
         />
-        <Checkbox
-          id="agree"
-          name="agree"
-          label="            Akceptuję politykę prywatności i wyrażam zgodę na przetrwarzanie
-            danych osobowych."
-          required
-        />
+        <Checkbox id="agree" name="agree" required />
 
         <Button secondary>
           Wyślij wiadomość <VscArrowRight />

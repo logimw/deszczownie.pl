@@ -45,4 +45,8 @@ export const InputWrapper = styled.div`
       color: ${({ theme }) => theme.colors.greyFont};
     }
   }
+
+  textarea {
+    resize: vertical;
+  }
 `;
