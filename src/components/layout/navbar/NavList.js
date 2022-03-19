@@ -1,6 +1,7 @@
 import React from "react";
 import { StyledNavLink, StyledNavList } from "./NavList.styles";
 import SubMenuTrigger from "./SubMenuTrigger";
+import PropTypes from "prop-types";
 
 const NavList = ({ isOpen }) => {
   return (
@@ -34,6 +35,10 @@ const NavList = ({ isOpen }) => {
       </li>
     </StyledNavList>
   );
+};
+
+NavList.propTypes = {
+  isOpen: PropTypes.bool,
 };
 
 export default NavList;

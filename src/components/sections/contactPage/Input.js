@@ -1,5 +1,6 @@
 import React from "react";
 import { InputWrapper } from "./Input.styles";
+import PropTypes from "prop-types";
 
 const Input = ({ id, type, label, placeholder, required }) => {
   return (
@@ -21,6 +22,14 @@ const Input = ({ id, type, label, placeholder, required }) => {
       )}
     </InputWrapper>
   );
+};
+
+Input.propTypes = {
+  id: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  required: PropTypes.bool,
 };
 
 export default Input;

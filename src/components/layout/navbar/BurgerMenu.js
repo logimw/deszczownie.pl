@@ -1,5 +1,6 @@
 import React from "react";
 import { StyledBurgerMenu } from "./BurgerMenu.styles";
+import PropTypes from "prop-types";
 
 const BurgerMenu = ({ onClick, isOpen }) => {
   return (
@@ -9,6 +10,11 @@ const BurgerMenu = ({ onClick, isOpen }) => {
       <span />
     </StyledBurgerMenu>
   );
+};
+
+BurgerMenu.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool,
 };
 
 export default BurgerMenu;

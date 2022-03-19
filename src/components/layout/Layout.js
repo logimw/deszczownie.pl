@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Wrapper } from "./Layout.styles";
 import Footer from "./footer/Footer";
 import Navbar from "./navbar/Navbar";
@@ -17,6 +18,10 @@ const Layout = ({ children }) => {
       </Wrapper>
     </ThemeProvider>
   );
+};
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

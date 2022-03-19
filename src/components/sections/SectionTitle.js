@@ -1,5 +1,6 @@
 import React from "react";
 import { StyledSectionTitle } from "./SectionTitle.styles";
+import PropTypes from "prop-types";
 
 const SectionTitle = ({ title, subtitle, lead }) => {
   return (
@@ -14,6 +15,12 @@ const SectionTitle = ({ title, subtitle, lead }) => {
       </div>
     </StyledSectionTitle>
   );
+};
+
+SectionTitle.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  lead: PropTypes.string,
 };
 
 export default SectionTitle;

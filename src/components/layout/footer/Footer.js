@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  FooterContainer,
-  FooterContent,
-  StyledFooter,
-  SubFooter,
-} from "./Footer.styles";
+import { FooterContainer, StyledFooter, SubFooter } from "./Footer.styles";
 import Logo from "../navbar/Logo";
 import FooterLinks from "./FooterLinks";
 import MouseIcon from "assets/svg/mouse.svg";

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { StyledCtaFeature } from "./CtaFeature.styles";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
@@ -11,6 +12,10 @@ const CtaFeature = ({ img }) => {
       <BsFillArrowRightCircleFill />
     </StyledCtaFeature>
   );
+};
+
+CtaFeature.propTypes = {
+  img: PropTypes.string,
 };
 
 export default CtaFeature;

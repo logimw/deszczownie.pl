@@ -6,6 +6,7 @@ import {
   EmailIcon,
   AccountIcon,
 } from "assets/icons/Icons";
+import PropTypes from "prop-types";
 
 const AddressBox = ({ data }) => {
   const { email, company, localization, phone } = data;
@@ -45,6 +46,10 @@ const AddressBox = ({ data }) => {
       </AddressItem>
     </StyledAddressBox>
   );
+};
+
+AddressBox.propTypes = {
+  data: PropTypes.object,
 };
 
 export default AddressBox;

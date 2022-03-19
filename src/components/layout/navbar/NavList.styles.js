@@ -44,7 +44,7 @@ export const StyledNavList = styled.ul`
     }
 
     &[open] .submenu {
-      display: block;
+      display: grid;
     }
 
     summary {
@@ -95,17 +95,19 @@ export const StyledNavList = styled.ul`
   .submenu {
     position: absolute;
     bottom: 0;
+    left: 50%;
     transform: translateY(100%) scaleY(1);
     transform-origin: 0 0;
     animation: 300ms ease-in-out 1 forwards ${showList};
     display: none;
-    background: ${({ theme }) => theme.colors.secondary};
+    background: ${({ theme }) => theme.colors.white};
     //box-shadow: 2px 2px 2px rgba(#e3e3e3, 0.5);
     box-shadow: 2px 2px 2px rgba(168, 168, 168, 0.3);
     list-style: none;
-    border-left: 3px solid ${({ theme }) => theme.colors.lightGrey};
     width: 100%;
-    max-width: 20rem;
+    max-width: 52rem;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 1rem 1rem;
 
     @media only screen and ${breakpoints.device.sm} {
       position: relative;
@@ -119,9 +121,45 @@ export const StyledNavList = styled.ul`
     li {
       background-color: transparent;
       transition: background-color 300ms ease-in-out;
+      position: relative;
 
       @media only screen and ${breakpoints.device.sm} {
         border-top: 1px solid ${({ theme }) => theme.colors.grey};
+      }
+
+      &.top-level {
+        color: ${({ theme }) => theme.colors.secondary};
+
+        a {
+          font-size: ${({ theme }) => theme.fontSize.s};
+
+          &::after {
+            background-color: ${({ theme }) => theme.colors.secondary};
+          }
+        }
+      }
+
+      &.second-level {
+        color: ${({ theme }) => theme.colors.secondaryLight};
+
+        a {
+          font-size: ${({ theme }) => theme.fontSize.s};
+          margin-left: 3rem;
+          text-decoration: none;
+          padding-bottom: 5px;
+
+          &::after {
+            background-color: ${({ theme }) => theme.colors.secondaryLight};
+            left: 3rem;
+            bottom: 3px;
+          }
+
+          &:hover {
+            a::after {
+              width: 75%;
+            }
+          }
+        }
       }
 
       a {
@@ -129,10 +167,22 @@ export const StyledNavList = styled.ul`
         animation: 300ms 100ms ease-in-out 1 forwards ${showListItem};
         height: 100%;
         display: block;
-        color: ${({ theme }) => theme.colors.white};
+        color: inherit;
         padding-left: 0;
         margin-left: 1rem;
-        margin-right: 1rem;
+        margin-right: 0.5rem;
+        border-bottom: none;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 5px;
+          left: 1rem;
+          width: 40px;
+          height: 1px;
+          transition: width 300ms;
+        }
+
         @media only screen and ${breakpoints.device.sm} {
           min-height: 5rem;
           display: flex;
@@ -145,19 +195,17 @@ export const StyledNavList = styled.ul`
         }
 
         &:hover {
-          border-bottom: 2px solid transparent;
+          &::after {
+            width: 75%;
+          }
         }
       }
 
       &:not(a.nav--active) {
-        border-bottom: 1px solid ${({ theme }) => theme.colors.lightGrey};
+        //border-bottom: 1px solid ${({ theme }) => theme.colors.lightGrey};
         @media only screen and ${breakpoints.device.sm} {
           //border-bottom: 1px solid ${({ theme }) => theme.colors.grey};
         }
-      }
-
-      &:hover {
-        background-color: ${({ theme }) => theme.colors.grey};
       }
     }
   }

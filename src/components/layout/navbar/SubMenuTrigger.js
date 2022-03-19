@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
+import PropTypes from "prop-types";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import { useDetectOutsideClick } from "hooks/useDetectOutsideClick";
-import { graphql, useStaticQuery } from "gatsby";
 import { StyledNavLink } from "./NavList.styles";
 import slugify from "slugify";
 
@@ -34,34 +35,75 @@ const SubMenuTrigger = ({ children }) => {
   const items = data.allContentfulProdukt.nodes;
   const categories = groupBy(items, "category");
 
-  // TODO: show products grouped by category OR rebuild menu.
+  const createStructure = () => {
+    let items = [];
+    for (const [key, value] of Object.entries(categories)) {
+      items.push({ [key]: value });
+    }
+    return items;
+  };
 
-  // for (const [key, value] of Object.entries(categories)) {
-  // value.forEach(item => console.log(`${key} - ${item.productName}`));
-  // }
+  const getLink = (array, slug) => {
+    if (array.length === 1) {
+      return `/oferta/${slug}`;
+    } else {
+      return null;
+    }
+  };
+  const renderMenuSubItem = (product, parent) => {
+    if (product.productName.toLowerCase() !== parent.toLowerCase()) {
+      const slug = slugify(product.productName, {
+        replacement: "-",
+        lower: true,
+      });
+      return (
+        <li key={product.id} className="second-level">
+          <Link to={`/oferta/${slug}`}>{product.productName}</Link>
+        </li>
+      );
+    }
+  };
+
+  const renderMenuItem = (name, children) => {
+    const slug = slugify(name, {
+      replacement: "-",
+      lower: true,
+    });
+    return (
+      <li key={name} className="top-level">
+        <StyledNavLink
+          activeClassName="nav--active"
+          to={getLink(children, slug)}
+        >
+          {name}
+        </StyledNavLink>
+      </li>
+    );
+  };
+
   return (
     <details open={isActive} onClick={e => onClick(e)}>
       <summary ref={dropdownRef}>{children}</summary>
       <ul className="submenu">
-        {items.map(product => {
-          const slug = slugify(product.productName, {
-            replacement: "-",
-            lower: true,
-          });
-          return (
-            <li key={product.id}>
-              <StyledNavLink
-                activeClassName="nav--active"
-                to={`/oferta/${slug}`}
-              >
-                {product.productName}
-              </StyledNavLink>
-            </li>
-          );
+        {createStructure().map(i => {
+          for (const [key, value] of Object.entries(categories)) {
+            if (i[key]) {
+              return (
+                <div>
+                  {renderMenuItem(key, value)}
+                  {i[key].map(y => renderMenuSubItem(y, key))}
+                </div>
+              );
+            }
+          }
         })}
       </ul>
     </details>
   );
+};
+
+SubMenuTrigger.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default SubMenuTrigger;

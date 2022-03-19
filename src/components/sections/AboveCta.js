@@ -1,15 +1,15 @@
 import React from "react";
-import { Container } from "../layout/Layout.styles";
-import Heading from "../layout/typography/Heading";
+import { Container } from "components/layout/Layout.styles";
+import Heading from "components/layout/typography/Heading";
 import {
   CenteredContainer,
   GridContainer,
   StyledAboveCta,
 } from "./AboveCta.styles";
 import CtaFeature from "../elements/CtaFeature";
-import Plant from "../../assets/svg/plant.svg";
-import Subheading from "../elements/Subheading";
-import Button from "../button/Button";
+import Plant from "assets/svg/plant.svg";
+import Subheading from "components/elements/Subheading";
+import Button from "components/button/Button";
 import { BsArrowRight } from "react-icons/bs";
 
 const AboveCta = () => {

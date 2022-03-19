@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../button/Button";
+import Button from "components/button/Button";
 import Input from "./Input";
 import Checkbox from "./Checkbox";
 import { VscArrowRight } from "react-icons/vsc";
@@ -37,7 +37,7 @@ const ContactForm = () => {
         />
         <Checkbox id="agree" name="agree" required />
 
-        <Button secondary>
+        <Button secondary={"true"}>
           Wyślij wiadomość <VscArrowRight />
         </Button>
       </form>

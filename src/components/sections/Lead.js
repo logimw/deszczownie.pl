@@ -8,6 +8,7 @@ import IconWrapper from "../layout/IconWrapper";
 import { BsArrowRight } from "react-icons/bs";
 import Drops from "../../assets/svg/water-drops.svg";
 import Subheading from "../elements/Subheading";
+import PropTypes from "prop-types";
 
 const Lead = ({ text }) => {
   return (
@@ -73,6 +74,10 @@ const Lead = ({ text }) => {
       </GridContainer>
     </Section>
   );
+};
+
+Lead.propTypes = {
+  text: PropTypes.string,
 };
 
 export default Lead;

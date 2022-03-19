@@ -11,10 +11,12 @@ import { SectionGrayStyles } from "../components/sections/SectionGray.styles";
 import Heading from "../components/layout/typography/Heading";
 import Subheading from "../components/elements/Subheading";
 import AboutImages from "../components/sections/AboutImages";
+import SEO from "../components/Seo";
 
 const AboutPage = () => {
   return (
     <Layout>
+      <SEO title="O nas" />
       <Section>
         <div className="hero">
           <SectionTitle

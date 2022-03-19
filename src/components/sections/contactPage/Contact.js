@@ -6,30 +6,6 @@ import ContactForm from "./ContactForm";
 import AddressBox from "./AddressBox";
 import { graphql, useStaticQuery } from "gatsby";
 
-// const contactData = {
-//   localization: {
-//     title: "Siedziba naszej firmy znajduje się",
-//     data: "ul. Poznańska 20,\n" + "\n" + "Brodowo 63-000 Środa Wlkp.",
-//   },
-//   email: {
-//     title: "Adres e-mail",
-//     data: "biuro@kmkagro.com",
-//   },
-//   company: {
-//     title: "Firma",
-//     data:
-//       "KMK Agro\n" +
-//       "\n" +
-//       "D. Kaźmierczak C. Mądry M. Kaźmierczak Sp. j.\n" +
-//       "\n" +
-//       "NIP: 786-15-72-061",
-//   },
-//   phone: {
-//     title: "Masz pytania? Zadzwoń do nas",
-//     data: "61 285 01 79",
-//   },
-// };
-
 const Contact = () => {
   const data = useStaticQuery(graphql`
     {

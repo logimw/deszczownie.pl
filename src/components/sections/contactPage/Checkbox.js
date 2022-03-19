@@ -1,6 +1,7 @@
 import React from "react";
 import { CheckboxWrapper } from "./Checkbox.styles";
 import { Link } from "gatsby";
+import PropTypes from "prop-types";
 
 const Checkbox = ({ id, required }) => {
   return (
@@ -13,6 +14,11 @@ const Checkbox = ({ id, required }) => {
       </label>
     </CheckboxWrapper>
   );
+};
+
+Checkbox.propTypes = {
+  id: PropTypes.string.isRequired,
+  required: PropTypes.bool,
 };
 
 export default Checkbox;

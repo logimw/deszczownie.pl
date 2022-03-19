@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const WhiteHeader = ({ title, subtitle }) => {
   return (
@@ -7,6 +8,11 @@ const WhiteHeader = ({ title, subtitle }) => {
       <p>{subtitle}</p>
     </div>
   );
+};
+
+WhiteHeader.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
 };
 
 export default WhiteHeader;

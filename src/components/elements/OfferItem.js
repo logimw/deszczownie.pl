@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { BsArrowRight } from "react-icons/bs";
 import { StyledOfferItem } from "./OfferItem.styles";
 import { StaticImage } from "gatsby-plugin-image";
@@ -56,6 +57,12 @@ const OfferItem = ({ img, title, description }) => {
       </Link>
     </StyledOfferItem>
   );
+};
+
+OfferItem.propTypes = {
+  img: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
 };
 
 export default OfferItem;

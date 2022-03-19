@@ -7,6 +7,10 @@ export const HeadingStyled = styled.div`
     font-size: ${({ theme }) => theme.fontSize.h2};
   }
 
+  h2 {
+    margin-bottom: 2rem;
+  }
+
   .stripes {
     position: relative;
 

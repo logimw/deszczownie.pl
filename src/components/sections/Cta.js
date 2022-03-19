@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, CtaContainer, StyledCta } from "./Cta.styles";
 import { StaticImage } from "gatsby-plugin-image";
-import Button from "../button/Button";
+import Button from "components/button/Button";
 import { BsArrowRight } from "react-icons/bs";
 
 const Cta = () => {

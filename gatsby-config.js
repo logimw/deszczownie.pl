@@ -13,13 +13,16 @@ module.exports = {
   siteMetadata: {
     title: `Deszczownie, nawadnianie w rolnictwie`,
     siteUrl: `https://deszczownie.netlify.app/`,
+    titleTemplate: "%s · najlepsze rozwiązania w nawadnianiu rolnictwa!",
     description: `Oferujemy wiele rodzajów urządzeń nawadniających uprawy rolnicze takich jak deszczownie szpulowe i deszczownie mostowe, a także produkty pomocnicze jak pompy, linie przesyłowe, agregaty spalinowe, konsole niskociśnieniowe, zraszacze i wiele innych urządzeń skutecznych w nawadnianiu rolnictwa.`,
+    image: "/lead_img.png",
   },
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

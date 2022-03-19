@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import breakpoints from "../../../assets/styles/breakpoints";
+import breakpoints from "assets/styles/breakpoints";
 
 export const StyledInput = styled.input`
   padding: 5px 8px;
