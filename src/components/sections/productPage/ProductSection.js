@@ -5,6 +5,7 @@ import { ImgWrapper, LeadWrapper } from "../Lead.styles";
 import IconWrapper from "../../layout/IconWrapper";
 import Drops from "../../../assets/svg/water-drops.svg";
 import { StaticImage } from "gatsby-plugin-image";
+import PropTypes from "prop-types";
 
 const ProductSection = ({ title, lead, isSecondary, text }) => {
   if (isSecondary) {
@@ -138,6 +139,13 @@ const ProductSection = ({ title, lead, isSecondary, text }) => {
       </Section>
     );
   }
+};
+
+ProductSection.propTypes = {
+  title: PropTypes.string,
+  lead: PropTypes.bool,
+  isSecondary: PropTypes.bool,
+  text: PropTypes.string,
 };
 
 export default ProductSection;
