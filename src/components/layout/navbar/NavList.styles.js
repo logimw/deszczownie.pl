@@ -24,6 +24,16 @@ const showListItem = keyframes`
     opacity: 1;
   }`;
 
+export const MaskNav = styled.div`
+  @media only screen and ${breakpoints.device.sm} {
+    overflow: scroll;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+  }
+`;
+
 export const StyledNavList = styled.ul`
   list-style: none;
   display: flex;
@@ -45,6 +55,9 @@ export const StyledNavList = styled.ul`
 
     &[open] .submenu {
       display: grid;
+      @media only screen and ${breakpoints.device.sm} {
+        display: block;
+      }
     }
 
     summary {
@@ -116,6 +129,7 @@ export const StyledNavList = styled.ul`
       background: none;
       border-left: 0;
       box-shadow: 1px 0 4px #e3e3e3;
+      left: 0;
     }
 
     li {
@@ -124,12 +138,14 @@ export const StyledNavList = styled.ul`
       position: relative;
 
       @media only screen and ${breakpoints.device.sm} {
-        border-top: 1px solid ${({ theme }) => theme.colors.grey};
+        border-top: 0 solid ${({ theme }) => theme.colors.grey};
       }
 
       &.top-level {
         color: ${({ theme }) => theme.colors.secondary};
-
+        @media only screen and ${breakpoints.device.sm} {
+          padding-left: 0;
+        }
         a {
           font-size: ${({ theme }) => theme.fontSize.s};
 
@@ -181,6 +197,9 @@ export const StyledNavList = styled.ul`
           width: 40px;
           height: 1px;
           transition: width 300ms;
+          @media only screen and ${breakpoints.device.sm} {
+            display: none;
+          }
         }
 
         @media only screen and ${breakpoints.device.sm} {
@@ -212,12 +231,8 @@ export const StyledNavList = styled.ul`
 
   @media only screen and ${breakpoints.device.sm} {
     background: ${({ theme }) => theme.colors.lightGrey};
-    z-index: -1;
     flex-direction: column;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
+    min-height: 100vh;
     padding-top: 8rem;
     transition: transform 300ms ease-in-out;
     transform: ${({ isOpen }) =>

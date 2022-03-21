@@ -3,12 +3,15 @@ import breakpoints from "assets/styles/breakpoints";
 
 export const StyledBurgerMenu = styled.button`
   display: none;
-  height: 2.5rem;
-  width: 3.5rem;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
   background: none;
   border: none;
   outline: none;
+  width: 30px;
+  height: 25px;
   @media only screen and ${breakpoints.device.sm} {
     display: block;
   }
@@ -50,7 +53,7 @@ export const StyledBurgerMenu = styled.button`
       }
     }
     &:last-child {
-      top: 100%;
+      bottom: 0;
       opacity: ${({ isOpen }) => (isOpen ? "0" : "1")};
     }
   }
