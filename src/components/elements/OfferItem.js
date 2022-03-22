@@ -7,7 +7,7 @@ import { Link } from "gatsby";
 import Button from "../button/Button";
 import slugify from "slugify";
 
-const OfferItem = ({ img, title, description }) => {
+const OfferItem = ({ img, title, description, noLink }) => {
   const slug = slugify(title, {
     replacement: "-",
     lower: true,
@@ -26,7 +26,7 @@ const OfferItem = ({ img, title, description }) => {
   };
   return (
     <StyledOfferItem>
-      <Link to={link}>
+      <Link to={!noLink && link}>
         {img && (
           <div className="img-container">
             <StaticImage
@@ -63,6 +63,7 @@ OfferItem.propTypes = {
   img: PropTypes.string,
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
+  noLink: PropTypes.bool,
 };
 
 export default OfferItem;

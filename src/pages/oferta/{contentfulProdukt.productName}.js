@@ -7,6 +7,7 @@ import ProductHero from "components/sections/ProductHero";
 import SEO from "components/Seo";
 import { getImage } from "gatsby-plugin-image";
 import ProductSection from "components/sections/productPage/ProductSection";
+import PropTypes from "prop-types";
 
 const ProductPage = ({ data }) => {
   const {
@@ -71,5 +72,9 @@ export const query = graphql`
     }
   }
 `;
+
+ProductPage.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export default ProductPage;

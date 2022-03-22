@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 const NavList = ({ isOpen }) => {
   return (
-    <MaskNav>
+    <MaskNav isOpen={isOpen}>
       <StyledNavList isOpen={isOpen}>
         <li>
           <StyledNavLink activeClassName="nav--active" to="/">

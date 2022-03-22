@@ -6,6 +6,7 @@ import IconWrapper from "../../layout/IconWrapper";
 import Drops from "../../../assets/svg/water-drops.svg";
 import { StaticImage } from "gatsby-plugin-image";
 import PropTypes from "prop-types";
+import { WaterDropsIcon } from "../../../assets/icons/Icons";
 
 const ProductSection = ({ title, lead, isSecondary, text }) => {
   if (isSecondary) {
@@ -117,7 +118,7 @@ const ProductSection = ({ title, lead, isSecondary, text }) => {
           <div className="col-2">
             <LeadWrapper>
               <IconWrapper>
-                <img src={Drops} alt="water drops" />
+                <WaterDropsIcon />
                 <h5>Sprawdzone rozwiązania</h5>
               </IconWrapper>
               <IconWrapper isBottom isLogo>

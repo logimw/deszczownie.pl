@@ -6,9 +6,9 @@ import { ImgWrapper, LeadWrapper } from "./Lead.styles";
 import Button from "../button/Button";
 import IconWrapper from "../layout/IconWrapper";
 import { BsArrowRight } from "react-icons/bs";
-import Drops from "../../assets/svg/water-drops.svg";
 import Subheading from "../elements/Subheading";
 import PropTypes from "prop-types";
+import { WaterDropsIcon } from "assets/icons/Icons";
 
 const Lead = ({ text }) => {
   return (
@@ -16,7 +16,7 @@ const Lead = ({ text }) => {
       <GridContainer>
         <LeadWrapper isPrimary>
           <IconWrapper>
-            <img src={Drops} alt="water drops" />
+            <WaterDropsIcon />
             <h5>Sprawdzone rozwiązania</h5>
           </IconWrapper>
           <IconWrapper isBottom isLogo>

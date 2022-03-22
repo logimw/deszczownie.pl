@@ -9,8 +9,8 @@ export const StyledIconWrapper = styled.div`
   text-align: center;
 
   position: absolute;
-  height: 24rem;
-  width: 24rem;
+  height: 20rem;
+  width: 20rem;
   background-color: ${({ isLogo }) => (isLogo ? "transparent" : "#256D1B")};
   top: ${({ isBottom }) => (isBottom ? "auto" : "-5rem")};
   bottom: ${({ isBottom }) => (isBottom ? "-10rem" : "auto")};
@@ -33,11 +33,20 @@ export const StyledIconWrapper = styled.div`
     font-size: 1.6rem;
     font-weight: normal;
   }
-
-  img {
+  svg {
+    max-width: 10rem;
+  }
+  img,
+  svg {
+    stroke: ${({ theme }) => theme.colors.white};
+    transition: stroke 300ms;
     @media only screen and ${breakpoints.device.lg} {
       max-width: 5rem;
     }
+  }
+
+  &:hover svg {
+    stroke: ${({ theme }) => theme.colors.secondary};
   }
 
   h5 {

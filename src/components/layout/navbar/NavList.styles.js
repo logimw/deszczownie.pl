@@ -26,12 +26,14 @@ const showListItem = keyframes`
 
 export const MaskNav = styled.div`
   @media only screen and ${breakpoints.device.sm} {
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
-  }
+    transform: ${({ isOpen }) =>
+      isOpen ? "translateX(0)" : "translateX(100%)"};
 `;
 
 export const StyledNavList = styled.ul`

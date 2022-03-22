@@ -6,6 +6,7 @@ import {
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import OfferItem from "../elements/OfferItem";
 import { SliderWrapper } from "./HeroSlider.styles";
+import PropTypes from "prop-types";
 
 const ProductHero = ({ title, img }) => {
   return (
@@ -29,10 +30,15 @@ const ProductHero = ({ title, img }) => {
       </SliderWrapper>
 
       <ProductContainerStyles>
-        <OfferItem description title={title} />
+        <OfferItem description title={title} noLink />
       </ProductContainerStyles>
     </ProductHeroStyles>
   );
+};
+
+ProductHero.propTypes = {
+  title: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
 };
 
 export default ProductHero;
