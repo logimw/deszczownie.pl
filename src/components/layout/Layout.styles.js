@@ -3,7 +3,6 @@ import breakpoints from "assets/styles/breakpoints";
 import marker from "assets/images/list-marker.png";
 
 export const Wrapper = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&display=swap");
   width: 100%;
   display: grid;
   grid-template-columns:

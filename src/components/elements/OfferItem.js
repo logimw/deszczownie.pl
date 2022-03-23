@@ -24,9 +24,18 @@ const OfferItem = ({ img, title, description, noLink }) => {
       </div>
     );
   };
+
+  const ConditionalLink = ({ children }) => {
+    if (noLink) {
+      return <>{children}</>;
+    } else {
+      return <Link to={link}>{children}</Link>;
+    }
+  };
+
   return (
     <StyledOfferItem>
-      <Link to={!noLink && link}>
+      <ConditionalLink>
         {img && (
           <div className="img-container">
             <StaticImage
@@ -54,7 +63,7 @@ const OfferItem = ({ img, title, description, noLink }) => {
             </Button>
           )}
         </div>
-      </Link>
+      </ConditionalLink>
     </StyledOfferItem>
   );
 };
@@ -62,7 +71,7 @@ const OfferItem = ({ img, title, description, noLink }) => {
 OfferItem.propTypes = {
   img: PropTypes.string,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string,
+  description: PropTypes.bool,
   noLink: PropTypes.bool,
 };
 

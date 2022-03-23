@@ -130,8 +130,9 @@ export const StyledNavList = styled.ul`
       max-width: unset;
       background: none;
       border-left: 0;
-      box-shadow: 1px 0 4px #e3e3e3;
+      box-shadow: 3px 1px 3px #e3e3e3;
       left: 0;
+      padding-bottom: 5rem;
     }
 
     li {
@@ -159,12 +160,20 @@ export const StyledNavList = styled.ul`
 
       &.second-level {
         color: ${({ theme }) => theme.colors.secondaryLight};
+        @media only screen and ${breakpoints.device.sm} {
+          padding-left: 0;
+          margin-left: 2rem;
+        }
 
         a {
           font-size: ${({ theme }) => theme.fontSize.s};
           margin-left: 3rem;
           text-decoration: none;
           padding-bottom: 5px;
+
+          @media only screen and ${breakpoints.device.sm} {
+            margin-left: 0;
+          }
 
           &::after {
             background-color: ${({ theme }) => theme.colors.secondaryLight};
@@ -247,7 +256,7 @@ export const StyledNavList = styled.ul`
   li {
     @media only screen and ${breakpoints.device.sm} {
       width: 100%;
-      padding-left: 5rem;
+      padding-left: 2rem;
       min-height: 5rem;
       border-bottom: 1px solid ${({ theme }) => theme.colors.grey};
       display: flex;

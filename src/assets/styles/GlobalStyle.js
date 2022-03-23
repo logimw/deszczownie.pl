@@ -2,8 +2,6 @@ import { createGlobalStyle } from "styled-components";
 import breakpoints from "./breakpoints";
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&display=swap');
   html {
     box-sizing: border-box;
     font-size: 62.5%;

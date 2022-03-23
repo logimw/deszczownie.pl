@@ -43,11 +43,19 @@ const SubMenuTrigger = ({ children }) => {
     return items;
   };
 
-  const getLink = (array, slug) => {
+  const getLink = (array, slug, name) => {
     if (array.length === 1) {
-      return `/oferta/${slug}`;
+      return (
+        <StyledNavLink activeClassName="nav--active" to={`/oferta/${slug}`}>
+          {name}
+        </StyledNavLink>
+      );
     } else {
-      return null;
+      return (
+        <StyledNavLink to={"/"} activeClassName="nav--active">
+          {name}
+        </StyledNavLink>
+      );
     }
   };
   const renderMenuSubItem = (product, parent) => {
@@ -71,12 +79,7 @@ const SubMenuTrigger = ({ children }) => {
     });
     return (
       <li key={name} className="top-level">
-        <StyledNavLink
-          activeClassName="nav--active"
-          to={getLink(children, slug)}
-        >
-          {name}
-        </StyledNavLink>
+        {getLink(children, slug, name)}
       </li>
     );
   };
@@ -89,7 +92,7 @@ const SubMenuTrigger = ({ children }) => {
           for (const [key, value] of Object.entries(categories)) {
             if (i[key]) {
               return (
-                <div>
+                <div key={key}>
                   {renderMenuItem(key, value)}
                   {i[key].map(y => renderMenuSubItem(y, key))}
                 </div>

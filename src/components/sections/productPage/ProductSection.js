@@ -1,12 +1,15 @@
 import React from "react";
-import { GridContainer, Section, TextBox } from "../../layout/Layout.styles";
-import Heading from "../../layout/typography/Heading";
+import {
+  GridContainer,
+  Section,
+  TextBox,
+} from "components/layout/Layout.styles";
+import Heading from "components/layout/typography/Heading";
 import { ImgWrapper, LeadWrapper } from "../Lead.styles";
-import IconWrapper from "../../layout/IconWrapper";
-import Drops from "../../../assets/svg/water-drops.svg";
+import IconWrapper from "components/layout/IconWrapper";
 import { StaticImage } from "gatsby-plugin-image";
 import PropTypes from "prop-types";
-import { WaterDropsIcon } from "../../../assets/icons/Icons";
+import { WaterDropsIcon } from "assets/icons/Icons";
 
 const ProductSection = ({ title, lead, isSecondary, text }) => {
   if (isSecondary) {
@@ -77,7 +80,7 @@ const ProductSection = ({ title, lead, isSecondary, text }) => {
           </div>
           <div className="col-2">
             <StaticImage
-              src="../../../assets/images/d5.png"
+              src="../../../assets/images/preview.jpeg"
               alt="Deszczownia"
               height={350}
               width={560}
@@ -129,7 +132,7 @@ const ProductSection = ({ title, lead, isSecondary, text }) => {
               </IconWrapper>
               <ImgWrapper>
                 <StaticImage
-                  src="../../../assets/images/d4.png"
+                  src="../../../assets/images/preview.jpeg"
                   alt="Deszczownia"
                   layout="fullWidth"
                 />

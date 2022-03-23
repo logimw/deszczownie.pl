@@ -31,16 +31,25 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-resolve-src",
-      options: {
-        srcPath: path.resolve(__dirname, "src"),
-      },
-    },
-    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
         accessToken: process.env.GATSBY_CONTENTFUL_API_KEY,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-root-import",
+      options: {
+        components: path.join(__dirname, "src", "components"),
+        assets: path.join(__dirname, "src", "assets"),
+        hooks: path.join(__dirname, "src", "hooks"),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`IBM Plex Sans\:300,400,500,700`],
+        display: "swap",
       },
     },
   ],
