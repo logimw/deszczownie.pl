@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Container } from "components/layout/Layout.styles";
 import Heading from "components/layout/typography/Heading";
 import {
@@ -11,14 +11,38 @@ import Plant from "assets/svg/plant.svg";
 import Subheading from "components/elements/Subheading";
 import Button from "components/button/Button";
 import { BsArrowRight } from "react-icons/bs";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const AboveCta = () => {
-  return (
-    <StyledAboveCta>
-      <Container>
-        <Subheading />
+  const ref = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    const element = ref.current;
+    gsap.fromTo(
+      element.querySelectorAll(".fade"),
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: element.querySelectorAll(".fade"),
+          start: "bottom bottom",
+          end: "top top",
+        },
+      },
+    );
+  }, []);
 
-        <GridContainer>
+  return (
+    <StyledAboveCta ref={ref}>
+      <Container>
+        <Subheading className="fade" />
+
+        <GridContainer className="fade">
           <Heading>
             <h3>Oferujemy sprawdzone rozwiązania w nawadnianiu rolnictwa!</h3>
           </Heading>
@@ -44,7 +68,7 @@ const AboveCta = () => {
             </div>
           </div>
         </GridContainer>
-        <CenteredContainer>
+        <CenteredContainer className="fade">
           <CtaFeature img={Plant} />
           <CtaFeature img={Plant} />
           <CtaFeature img={Plant} />

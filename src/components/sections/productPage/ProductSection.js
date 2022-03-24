@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   GridContainer,
   Section,
@@ -10,12 +10,35 @@ import IconWrapper from "components/layout/IconWrapper";
 import { StaticImage } from "gatsby-plugin-image";
 import PropTypes from "prop-types";
 import { WaterDropsIcon } from "assets/icons/Icons";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const ProductSection = ({ title, lead, isSecondary, text }) => {
+  const ref = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    const element = ref.current;
+    gsap.fromTo(
+      element.querySelector(".fade"),
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: element.querySelector(".fade"),
+          start: "start 90%",
+          end: "top top",
+        },
+      },
+    );
+  }, []);
   if (isSecondary) {
     return (
-      <Section>
-        <GridContainer>
+      <Section ref={ref}>
+        <GridContainer className="fade">
           <div className="full-col">
             <Heading>
               <div className="stripes">
@@ -91,8 +114,8 @@ const ProductSection = ({ title, lead, isSecondary, text }) => {
     );
   } else {
     return (
-      <Section>
-        <GridContainer>
+      <Section ref={ref}>
+        <GridContainer className="fade">
           <div className="col-1">
             <Heading>
               <div className="stripes">

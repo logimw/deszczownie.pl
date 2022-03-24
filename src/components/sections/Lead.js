@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { GridContainer, Section, TextBox } from "../layout/Layout.styles";
 import Heading from "../layout/typography/Heading";
 import { StaticImage } from "gatsby-plugin-image";
@@ -9,11 +9,34 @@ import { BsArrowRight } from "react-icons/bs";
 import Subheading from "../elements/Subheading";
 import PropTypes from "prop-types";
 import { WaterDropsIcon } from "assets/icons/Icons";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Lead = ({ text }) => {
+  const ref = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    const element = ref.current;
+    gsap.fromTo(
+      element.querySelector(".fade"),
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: element.querySelector(".fade"),
+          start: "start 90%",
+          end: "top top",
+        },
+      },
+    );
+  }, []);
   return (
-    <Section>
-      <GridContainer>
+    <Section ref={ref}>
+      <GridContainer className="fade">
         <LeadWrapper isPrimary>
           <IconWrapper>
             <WaterDropsIcon />

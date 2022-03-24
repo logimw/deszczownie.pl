@@ -63,7 +63,7 @@ const Contact = () => {
         opacity: 1,
         y: 0,
         scrollTrigger: {
-          trigger: element.querySelector("h2"),
+          trigger: element.querySelector("h1"),
           start: "bottom bottom",
           end: "top top",
         },
