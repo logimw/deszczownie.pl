@@ -6,6 +6,7 @@ import Navbar from "./navbar/Navbar";
 import { theme } from "assets/styles/theme";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "assets/styles/GlobalStyle";
+import BackToTop from "components/elements/BackToTop";
 
 const Layout = ({ children }) => {
   return (
@@ -15,6 +16,7 @@ const Layout = ({ children }) => {
         <Navbar />
         {children}
         <Footer />
+        <BackToTop />
       </Wrapper>
     </ThemeProvider>
   );

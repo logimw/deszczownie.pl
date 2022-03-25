@@ -15,7 +15,6 @@ import breakpoints from "../../assets/styles/breakpoints";
 import Button from "../button/Button";
 import { BsArrowRight } from "react-icons/bs";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const HeroSlider = () => {
   let width;
