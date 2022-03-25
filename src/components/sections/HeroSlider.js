@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Navigation, Pagination, Autoplay, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -14,6 +14,8 @@ import { StaticImage } from "gatsby-plugin-image";
 import breakpoints from "../../assets/styles/breakpoints";
 import Button from "../button/Button";
 import { BsArrowRight } from "react-icons/bs";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const HeroSlider = () => {
   let width;
@@ -29,7 +31,16 @@ const HeroSlider = () => {
     }
   }, []);
 
-  console.log(typeof layout);
+  const ref = useRef(null);
+  useEffect(() => {
+    const element = ref.current;
+    gsap.from(element.querySelector(".fade-top"), {
+      opacity: 0,
+      y: 50,
+      duration: 0.5,
+      delay: 1,
+    });
+  }, []);
 
   return (
     <SliderWrapper>
@@ -49,8 +60,8 @@ const HeroSlider = () => {
         className="hero-slider"
       >
         <SwiperSlide>
-          <StyledSlideContent>
-            <SliderContainer>
+          <StyledSlideContent ref={ref}>
+            <SliderContainer className="fade-top">
               <h1>Najlepsze deszczownie na rynku</h1>
               <div>
                 <p>

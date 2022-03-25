@@ -34,7 +34,7 @@ const OfferItem = ({ img, title, description, noLink }) => {
   };
 
   return (
-    <StyledOfferItem>
+    <StyledOfferItem className="fade-group">
       <ConditionalLink>
         {img && (
           <div className="img-container">

@@ -4,7 +4,7 @@ import { AboutImagesWrapper } from "./AboutImages.styles";
 
 const AboutImages = () => {
   return (
-    <AboutImagesWrapper>
+    <AboutImagesWrapper className="fade">
       <StaticImage
         src={"../../assets/images/about-bg-1.png"}
         alt="Maszty kmk agro"

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import SectionTitle from "./SectionTitle";
 import { Container, Section, TextBox } from "../layout/Layout.styles";
 import { GridContainer, WrapperImages } from "./TextImages.styles";
@@ -6,15 +6,38 @@ import Button from "../button/Button";
 import { BsArrowRight } from "react-icons/bs";
 import { StaticImage } from "gatsby-plugin-image";
 import OfferItem from "../elements/OfferItem";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const TextImagesSecondary = () => {
+  const ref = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    const element = ref.current;
+    gsap.fromTo(
+      element.querySelectorAll(".fade"),
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: element.querySelectorAll(".fade"),
+          start: "bottom bottom",
+          end: "top top",
+        },
+      },
+    );
+  }, []);
   return (
-    <Section>
+    <Section ref={ref}>
       <SectionTitle
         title="Sekcja z galerią lub artykułami lub rekomendacjami lub z logami producentów"
         subtitle="Dystrybucja maszyn RM"
       />
-      <Container>
+      <Container className="fade">
         <GridContainer>
           <TextBox>
             <div className="full-col">

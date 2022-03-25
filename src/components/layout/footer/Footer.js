@@ -1,13 +1,36 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { FooterContainer, StyledFooter, SubFooter } from "./Footer.styles";
 import Logo from "../navbar/Logo";
 import FooterLinks from "./FooterLinks";
 import MouseIcon from "assets/svg/mouse.svg";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Footer = () => {
+  const ref = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    const element = ref.current;
+    gsap.fromTo(
+      element.querySelectorAll(".fade"),
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: element.querySelectorAll(".fade"),
+          start: "top bottom",
+          end: "top top",
+        },
+      },
+    );
+  }, []);
   return (
-    <StyledFooter>
-      <FooterContainer>
+    <StyledFooter ref={ref}>
+      <FooterContainer className="fade">
         <div>
           <h5>Firma</h5>
           <Logo />

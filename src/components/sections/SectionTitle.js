@@ -5,13 +5,13 @@ import PropTypes from "prop-types";
 const SectionTitle = ({ title, subtitle, lead }) => {
   return (
     <StyledSectionTitle>
-      {subtitle && <p className="subtitle">{subtitle}</p>}
-      <h2 className="heading">{title}</h2>
-      {lead && <p className="lead">{lead}</p>}
-      <div className="heading-decoration-container">
-        <div className="heading-decoration" />
-        <div className="heading-decoration" />
-        <div className="heading-decoration" />
+      {subtitle && <p className="subtitle fade">{subtitle}</p>}
+      <h2 className="heading fade fade-top">{title}</h2>
+      {lead && <p className="lead fade-top">{lead}</p>}
+      <div className="heading-decoration-container ">
+        <div className="heading-decoration fade-top" />
+        <div className="heading-decoration fade-top" />
+        <div className="heading-decoration fade-top" />
       </div>
     </StyledSectionTitle>
   );
