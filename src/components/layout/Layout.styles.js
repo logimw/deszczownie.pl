@@ -71,6 +71,19 @@ export const Container = styled.div`
 export const GridContainer = styled(Container)`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+
+  .not-found-page {
+    grid-column: 1 / -1;
+    min-height: 40vh;
+    height: calc(100vh - 543px - 15rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h5 {
+      font-size: 2rem;
+      margin: 2rem 0;
+    }
+  }
 `;
 
 export const GridWrapper = styled(Container)`
