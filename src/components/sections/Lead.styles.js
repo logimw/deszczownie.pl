@@ -13,13 +13,14 @@ export const LeadWrapper = styled.div`
 `;
 export const ImgWrapper = styled.div`
   position: relative;
-  min-height: 40rem;
-  min-width: 40rem;
-  div {
-    overflow: unset;
-  }
-  img {
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 3px;
+  border-radius: 10px;
+  .img-animation {
+    transition: transform 300ms;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 `;

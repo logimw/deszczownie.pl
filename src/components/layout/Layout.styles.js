@@ -84,6 +84,32 @@ export const GridContainer = styled(Container)`
       margin: 2rem 0;
     }
   }
+
+  .content {
+    grid-column: 1 / -1;
+
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+      margin-top: 5rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      margin-bottom: 5px;
+    }
+    li {
+      font-size: 1.4rem;
+    }
+    small {
+      font-size: 1.1rem;
+    }
+  }
 `;
 
 export const GridWrapper = styled(Container)`

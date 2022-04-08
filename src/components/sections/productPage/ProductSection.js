@@ -154,11 +154,13 @@ const ProductSection = ({ title, lead, isSecondary, text }) => {
                 />{" "}
               </IconWrapper>
               <ImgWrapper>
-                <StaticImage
-                  src="../../../assets/images/preview.jpeg"
-                  alt="Deszczownia"
-                  layout="fullWidth"
-                />
+                <div className="img-animation">
+                  <StaticImage
+                    src="../../../assets/images/preview.jpeg"
+                    alt="Deszczownia"
+                    layout="fullWidth"
+                  />
+                </div>
               </ImgWrapper>
             </LeadWrapper>
           </div>

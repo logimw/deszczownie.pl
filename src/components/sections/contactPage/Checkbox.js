@@ -8,8 +8,9 @@ const Checkbox = ({ id, required }) => {
     <CheckboxWrapper>
       <input type="checkbox" id={id} name={id} required />
       <label htmlFor={id}>
-        Akceptuję {<Link to={"/kontakt"}>politykę prywatności</Link>} i wyrażam
-        zgodę na przetwarzanie danych osobowych.
+        Akceptuję{" "}
+        {<Link to={"/polityka-prywatnosci"}>politykę prywatności</Link>} i
+        wyrażam zgodę na przetwarzanie danych osobowych.
         {required && "*"}
       </label>
     </CheckboxWrapper>
