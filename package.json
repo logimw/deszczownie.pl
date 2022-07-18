@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "deszczownie.pl",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
+  "description": "A commercial website for agricultural industry.",
+  "version": "0.23.11",
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
@@ -15,42 +15,39 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@googlemaps/react-wrapper": "^1.1.23",
+    "@googlemaps/react-wrapper": "^1.1.35",
     "@reach/router": "^1.3.4",
-    "babel-plugin-styled-components": "^1.13.3",
-    "gatsby": "^4.0.0",
+    "babel-plugin-styled-components": "^2.0.7",
+    "gatsby": "^4.18.2",
     "gatsby-plugin-google-fonts": "^1.0.1",
-    "gatsby-plugin-image": "^2.0.0",
-    "gatsby-plugin-react-helmet": "^5.10.0",
-    "gatsby-plugin-sharp": "^4.0.1",
-    "gatsby-plugin-styled-components": "^5.0.0",
-    "gatsby-source-contentful": "^7.7.2",
-    "gatsby-source-filesystem": "^4.0.0",
-    "gatsby-transformer-sharp": "^4.0.0",
-    "gsap": "^3.9.1",
+    "gatsby-plugin-image": "^2.18.1",
+    "gatsby-plugin-react-helmet": "^5.18.0",
+    "gatsby-plugin-sharp": "^4.18.1",
+    "gatsby-plugin-styled-components": "^5.18.0",
+    "gatsby-source-contentful": "^7.16.1",
+    "gatsby-source-filesystem": "^4.18.1",
+    "gatsby-transformer-sharp": "^4.18.1",
+    "gsap": "^3.10.4",
     "prop-types": "^15.8.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-    "react-icons": "^4.3.1",
+    "react-icons": "^4.4.0",
     "slugify": "^1.6.5",
-    "styled-components": "^5.3.3",
-    "swiper": "^7.2.0"
+    "styled-components": "^5.3.5",
+    "swiper": "^8.3.1"
   },
   "devDependencies": {
-    "dotenv": "^16.0.0",
-    "eslint": "^7.32.0",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-config-react-app": "^7.0.0",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-prettier": "^4.2.1",
     "gatsby-plugin-root-import": "^2.0.8",
-    "prettier": "2.4.1"
+    "prettier": "2.7.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/logimw/deszczownie.pl"
   }
 }
